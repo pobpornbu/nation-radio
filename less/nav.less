@@ -1,0 +1,221 @@
+#nation-radio-theme {
+	.cd-main-header {
+		background: @color-brand-primary;
+		&.nav-is-visible .cd-logo {
+			display: none;
+		}
+		@media screen and (min-width: 769px){
+			height: 120px;
+		}
+	}
+
+	.cd-header-buttons {
+		left: 0;
+		margin: 0;
+		padding: 0 0 0 10px;
+		width: 100%;
+	}
+	.cd-nav-trigger {
+		position: absolute;
+		left: 15px;
+		width: 35px;
+		span {
+			&, &::before, &::after {
+					background: @white;
+			}
+		}
+		&.nav-is-visible span {
+			background: rgba(255,255,255,0);
+		}
+	}
+
+	.cd-nav-trigger, .cd-search-trigger {
+		height: 55px;
+	}
+
+	.cd-primary-nav {
+		background: @blue-dark;
+		// .box-shadow(1px 6px 5px rgba(0,0,0,0.24));
+		padding: 0;
+		@media screen and (min-width: 769px) {
+			background: @blue-light;
+			left: 0;
+			float: none;
+			margin-left: 120px;
+			height: 120px;
+		}
+	}
+
+.component(logo{
+	.part(container{
+		.option(large{
+			width: 100%;
+			height: 170px;
+			padding: 33px 0;
+			background: @color-brand-primary;
+		});
+		.option(small{
+			width: 50px;
+			height: 50px;
+			left: 62px;
+			top: 50%;
+			.transform(translateY(-50%));
+			background: url(../images/logo-nation-radio-small.png) no-repeat center/contain;
+			@media screen and (min-width: 769px){
+				width: 85px;
+				height: 100px;
+				margin: 0 15px;
+				left: 0;
+				background: url(../images/logo-nation-radio-large.png) no-repeat center/contain;
+			}
+		});
+	});
+	.option(large{
+		display: inline-block;
+		width: 80px;
+		});
+	});
+
+	.component(menu{
+		.part(item{
+			@media screen and (min-width: 769px) {
+				margin-left: 25px;
+			}
+			@media screen and (min-width: 900px) {
+				margin-left: 30px;
+			}
+		});
+		.part(link{
+			color: @color-font-normal;
+			border-bottom: 1px solid @color-brand-primary;	
+			.font-kanda(14px, 700);	
+			&:hover {
+				text-decoration: none;
+				color: @white;
+			}
+			@media screen and (min-width: 769px) {
+				color: @color-border-primary;
+				border-bottom: none;
+			  letter-spacing: 1px;
+			  height: 60px;
+			  line-height: normal;
+			  margin-top: 60px;
+			  padding: 16px 0px;
+ 			}
+		});
+		.part(text{
+			.font-kanda(14px);
+			color: @white;
+			position: absolute;
+			top: 22px;
+			right: 20px;
+		});
+	});
+	.component(search{
+		.part(container{
+			@media screen and (min-width: 769px) {
+				top: 70px;
+				left: auto;
+				right: 20px;
+				width: 213px;
+				height: 34px;
+			}
+		});
+		.part(input{
+			@media screen and (min-width: 769px) {
+				background: none;
+				padding: 3px 20px;
+				.font-kanda(14px);
+				.round;
+			}
+		});
+		.part(icon{
+			&:before {
+				border-color: @color-font-normal;
+				top: 15px;
+			}
+			&:hover:before {
+				border-color: @white;
+			}
+			&:after {
+				background: @color-font-normal;
+				bottom: 21px;
+			}
+			&:hover:after {
+				background: @white;
+			}
+			span {
+				&::before, &::after {
+					background: @white;
+				}
+			}
+			@media screen and (min-width: 769px) {
+				position: absolute;
+	  		top: 45px;
+	  		right: 10px;
+				&:before {
+					border-color: @blue-grey;
+					top: 15px;
+		  		.opacity(1);
+				}
+				&:hover:before {
+					border-color: @blue-medium;
+				}
+				&:after {
+					background: @blue-grey;
+					bottom: 21px;
+		  		.opacity(1);
+				}
+				&:hover:after {
+					background: @blue-medium;
+				}
+				span {
+					.opacity(0);
+					&::before, &::after {
+						background: @blue-medium;
+					}
+				}
+			}
+		});
+	});
+
+	.component(social{
+		.part(wrap{
+			text-align: center;
+			@media screen and (min-width: 769px){
+				text-align: left;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				margin-left: 0;
+				padding: 0 20px;
+				background-color: @blue-dark;
+				&:before {
+					content: "Follow Us : ";
+					.font-kanda(14px);
+					color: @white;
+					position: relative;
+					top: -5px;
+				}
+			}
+		});
+		.part(icon{
+			display: inline-block;
+			font-size: 25px;
+			padding: 0 10px 0 0;
+			color: @color-icon-social;
+			&:hover {
+				color: @white;
+			}
+			@media screen and (min-width: 769px){
+				height: auto;
+				line-height: 1;
+				padding: 10px 0 7px 5px;
+			}
+		});
+	});
+	.cd-overlay{
+		background: none;
+	}
+}
