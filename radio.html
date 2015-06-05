@@ -131,15 +131,16 @@
       <div class="row">       
         <div class="col-sm-8 col-sm-push-4 radioplayer__container text-center">
           <div><img src="images/onair.png" alt="Now On air logo" class="radio__logo"></div>
-          <div><img src="/images/equalizer-web.gif" alt="radio equalizer"></div>
+          <div><img src="/images/equalizer-web.gif" alt="radio equalizer" class="radio__img"></div>
           <main class="radioplayer__wrap clearfix">
             <div>
               <p class="radio__text"><time datetime="2015-06-10 8:00-9:30">08:00 - 09:30</time> เก็บตกจากเนชั่น</p>
-              <button class="button --icon --play --expand fa-play-circle" onclick="jwplayer('audio').play(); return false;">FM 90.5 <span class="hidden-sm">MHz</span></button>
+              <button class="button --icon --play --expand js-btn-radio">FM 90.5 <span class="hidden-sm">MHz</span></button>
+              <!-- <button class="button --icon --play --expand fa-play-circle js-play" onclick="play()">FM 90.5 <span class="hidden-sm">MHz</span></button> -->
             </div>
             <div>
               <p class="radio__text">------------------------</p>
-              <button class="button --icon --play --expand fa-play-circle">FM 102 <span class="hidden-sm">MHz</span></button>
+              <button class="button --icon --play --expand js-btn-radio">FM 102 <span class="hidden-sm">MHz</span></button>
             </div>
             <div id="audio"></div>
           </main>
@@ -243,7 +244,19 @@
   <script src="js/component.js"></script>
   <script src="js/navleft.js"></script>
   <script src="js/select.js"></script>
-
+  <script>
+    $('.js-btn-radio').on('click', function(){
+      console.log('play');
+      jwplayer('audio').play(); 
+      $(this).toggleClass("js-play");
+      return false;
+    });
+  // function play(){
+  //   console.log('play');
+  //   jwplayer('audio').play(); 
+  //   return false;
+  // }
+</script>
   <script src="js/jquery.mCustomScrollbar.min.js"></script>
   <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
   </body>

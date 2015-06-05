@@ -35,11 +35,17 @@ lesshat-selector {
 }
 #nation-radio-theme .cd-main-header {
   background: #2f4590;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 #nation-radio-theme .cd-main-header.nav-is-visible .cd-logo {
   display: none;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   #nation-radio-theme .cd-main-header {
     height: 120px;
   }
@@ -71,13 +77,28 @@ lesshat-selector {
   background: #223266;
   padding: 0;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   #nation-radio-theme .cd-primary-nav {
     background: #d5dae9;
     left: 0;
     float: none;
     margin-left: 120px;
     height: 120px;
+  }
+}
+#nation-radio-theme .main__container {
+  padding-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  #nation-radio-theme .main__container {
+    padding-top: 120px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  #nation-radio-theme .cd-primary-nav .cd-secondary-nav,
+  #nation-radio-theme .cd-primary-nav .cd-nav-gallery,
+  #nation-radio-theme .cd-primary-nav .cd-nav-icons {
+    top: 120px;
   }
 }
 #nation-radio-theme .logo__container.\--large {
@@ -98,7 +119,7 @@ lesshat-selector {
   transform: translateY(-50%);
   background: url(../images/logo-nation-radio-small.png) no-repeat center / contain;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   #nation-radio-theme .logo__container.\--small {
     width: 85px;
     height: 100px;
@@ -111,7 +132,7 @@ lesshat-selector {
   display: inline-block;
   width: 80px;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   #nation-radio-theme .menu__item {
     margin-left: 25px;
   }
@@ -133,7 +154,7 @@ lesshat-selector {
   text-decoration: none;
   color: #ffffff;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   #nation-radio-theme .menu__link {
     color: #2f458f;
     border-bottom: none;
@@ -154,16 +175,20 @@ lesshat-selector {
   top: 22px;
   right: 20px;
 }
-@media screen and (min-width: 769px) {
+#nation-radio-theme .search__container {
+  position: fixed;
+}
+@media screen and (min-width: 768px) {
   #nation-radio-theme .search__container {
-    top: 70px;
+    top: 73px;
     left: auto;
     right: 20px;
     width: 213px;
     height: 34px;
+    z-index: 1000;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   #nation-radio-theme .search__input {
     background: none;
     padding: 3px 20px;
@@ -197,11 +222,12 @@ lesshat-selector {
 #nation-radio-theme .search__icon span::after {
   background: #ffffff;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   #nation-radio-theme .search__icon {
     position: absolute;
     top: 45px;
-    right: 10px;
+    right: 20px;
+    z-index: 1001;
   }
   #nation-radio-theme .search__icon:before {
     border-color: #919abd;
@@ -242,7 +268,7 @@ lesshat-selector {
 #nation-radio-theme .social__wrap {
   text-align: center;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   #nation-radio-theme .social__wrap {
     text-align: left;
     position: absolute;
@@ -273,7 +299,7 @@ lesshat-selector {
 #nation-radio-theme .social__icon:hover {
   color: #ffffff;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   #nation-radio-theme .social__icon {
     height: auto;
     line-height: 1;
@@ -866,6 +892,18 @@ input[type=checkbox]:checked + .input--primary:before {
 .button.\--play.disabled {
   color: extract(#ffffff, #ffffff, rgba(47, 69, 144, 0.7), 4);
 }
+.button.\--play.js-play:before {
+  content: "\f04c";
+  display: inline-block;
+  font-family: "FontAwesome", Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .button.\--play:before {
   content: "\f144";
   display: inline-block;
@@ -1226,7 +1264,7 @@ input[type=checkbox]:checked + .input--primary:before {
 }
 #radio-page .radioplayer__container {
   padding-top: 30px;
-  padding-bottom: 48px;
+  height: 459px;
   background: #405497 url(../images/bg-radio.jpg) no-repeat center bottom;
 }
 @media screen and (min-width: 768px) {
@@ -1241,7 +1279,10 @@ input[type=checkbox]:checked + .input--primary:before {
 }
 #radio-page .radio__logo {
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
+}
+#radio-page .radio__img {
+  margin-bottom: 15px;
 }
 #radio-page .radio__h1 {
   font-size: 22px;
@@ -1266,10 +1307,8 @@ input[type=checkbox]:checked + .input--primary:before {
   display: none;
 }
 #radio-page #audio {
-  margin: 0 auto;
-}
-#radio-page #audio .jwgroup.jwright {
   position: absolute;
+  margin: 0 auto;
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
@@ -1278,9 +1317,14 @@ input[type=checkbox]:checked + .input--primary:before {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 100%;
+  margin-top: 15px;
 }
 #radio-page #audio .jwvolumeH {
   width: 259px;
+}
+#radio-page #audio .jwprogressOverflow {
+  overflow: visible;
+  opacity: 1 !important;
 }
 @media screen and (min-width: 768px) {
   #radio-page #audio .jwvolumeH {

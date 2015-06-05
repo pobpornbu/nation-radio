@@ -1,4 +1,4 @@
-$(function() {
+(function($) {
 
 	// Textarea
 	autosize($('textarea'));

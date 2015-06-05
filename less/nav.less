@@ -1,10 +1,17 @@
 #nation-radio-theme {
 	.cd-main-header {
 		background: @color-brand-primary;
+		position: fixed;
+	  width: 100%;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  z-index: 999;
+
 		&.nav-is-visible .cd-logo {
 			display: none;
 		}
-		@media screen and (min-width: 769px){
+		@media screen and (min-width: 768px){
 			height: 120px;
 		}
 	}
@@ -37,12 +44,19 @@
 		background: @blue-dark;
 		// .box-shadow(1px 6px 5px rgba(0,0,0,0.24));
 		padding: 0;
-		@media screen and (min-width: 769px) {
+		@media screen and (min-width: 768px) {
 			background: @blue-light;
 			left: 0;
 			float: none;
 			margin-left: 120px;
 			height: 120px;
+		}
+	}
+
+	.main__container {
+		padding-top: 60px;
+		@media screen and (min-width: 768px){
+			padding-top: 120px;
 		}
 	}
 
@@ -61,7 +75,7 @@
 			top: 50%;
 			.transform(translateY(-50%));
 			background: url(../images/logo-nation-radio-small.png) no-repeat center/contain;
-			@media screen and (min-width: 769px){
+			@media screen and (min-width: 768px){
 				width: 85px;
 				height: 100px;
 				margin: 0 15px;
@@ -78,7 +92,7 @@
 
 	.component(menu{
 		.part(item{
-			@media screen and (min-width: 769px) {
+			@media screen and (min-width: 768px) {
 				margin-left: 25px;
 			}
 			@media screen and (min-width: 900px) {
@@ -93,7 +107,7 @@
 				text-decoration: none;
 				color: @white;
 			}
-			@media screen and (min-width: 769px) {
+			@media screen and (min-width: 768px) {
 				color: @color-border-primary;
 				border-bottom: none;
 			  letter-spacing: 1px;
@@ -113,16 +127,18 @@
 	});
 	.component(search{
 		.part(container{
-			@media screen and (min-width: 769px) {
-				top: 70px;
+			position: fixed;
+			@media screen and (min-width: 768px) {
+				top: 73px;
 				left: auto;
 				right: 20px;
 				width: 213px;
 				height: 34px;
+				z-index: @zindex-search;
 			}
 		});
 		.part(input{
-			@media screen and (min-width: 769px) {
+			@media screen and (min-width: 768px) {
 				background: none;
 				padding: 3px 20px;
 				.font-kanda(14px);
@@ -149,10 +165,11 @@
 					background: @white;
 				}
 			}
-			@media screen and (min-width: 769px) {
+			@media screen and (min-width: 768px) {
 				position: absolute;
 	  		top: 45px;
-	  		right: 10px;
+	  		right: 20px;
+	  		z-index: @zindex-search-icon;
 				&:before {
 					border-color: @blue-grey;
 					top: 15px;
@@ -182,7 +199,7 @@
 	.component(social{
 		.part(wrap{
 			text-align: center;
-			@media screen and (min-width: 769px){
+			@media screen and (min-width: 768px){
 				text-align: left;
 				position: absolute;
 				left: 0;
@@ -208,7 +225,7 @@
 			&:hover {
 				color: @white;
 			}
-			@media screen and (min-width: 769px){
+			@media screen and (min-width: 768px){
 				height: auto;
 				line-height: 1;
 				padding: 10px 0 7px 5px;
