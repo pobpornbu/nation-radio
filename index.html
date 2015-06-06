@@ -84,14 +84,23 @@
   <meta name="twitter:creator" content="">
   <meta name="twitter:image:src" content="">
 </head>
-<body id="nation-radio-theme" class="nav-on-left" ng-app="NationRadio">
+<body id="nation-radio-theme" class="nav-on-left">
+<div id="nation-nav-theme">
   <header class="cd-main-header">
     <a class="cd-logo logo__container --small" href="index.html">
       <!-- <img src="images/logo-nation-radio-small.png" alt="Nation Radio Logo"> -->
     </a>
 
     <ul class="cd-header-buttons">
-      <li><a class="cd-search-trigger search__icon" href="#cd-search"><span></span></a></li>
+      <li class="visible-xs-block">
+        <a class="cd-search-trigger search__icon" href="#cd-search"><span></span></a>
+      </li>
+      <li class="hidden-xs">
+        <form class="search__container">
+          <a class="cd-search-trigger search__icon" href="#cd-search"><span></span></a>
+          <input type="search" class="search__input" placeholder="Search...">
+        </form>
+      </li>
       <li><a class="cd-nav-trigger" href="#cd-primary-nav"><span></span></a></li>
     </ul> <!-- cd-header-buttons -->
   </header>
@@ -217,8 +226,6 @@
       <div class="logo__container --large text-center visible-xs-block">
         <img src="images/logo-nation-radio-large.png" alt="Nation Radio Logo" class="logo --large">
       </div>
-      <div class="hidden-xs">
-      </div>
       <li class="menu__item"><a class="menu__link" href="#">ข่าว</a></li>
       <li class="menu__item"><a class="menu__link" href="#">ผังรายการ</a></li>
       <li class="menu__item"><a class="menu__link" href="#">ผู้ดำเนินรายการ</a></li>
@@ -241,11 +248,12 @@
     </ul> <!-- primary-nav -->
   </nav> <!-- cd-nav -->
 
-  <div id="cd-search" class="cd-search search__container">
+  <div id="cd-search" class="cd-search search__container visible-xs-block">
     <form>
-      <input type="search" class="search__input" placeholder="Search...">
+      <input type="search" class="" placeholder="Search...">
     </form>
   </div>
+</div>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 

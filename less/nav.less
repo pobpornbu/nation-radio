@@ -1,4 +1,4 @@
-#nation-radio-theme {
+#nation-nav-theme {
 	.cd-main-header {
 		background: @color-brand-primary;
 		position: fixed;
@@ -108,13 +108,18 @@
 				color: @white;
 			}
 			@media screen and (min-width: 768px) {
-				color: @color-border-primary;
+				color: @color-font-nav;
 				border-bottom: none;
 			  letter-spacing: 1px;
 			  height: 60px;
 			  line-height: normal;
 			  margin-top: 60px;
 			  padding: 16px 0px;
+			  &:hover, &:active, &:visited, &:focus {
+			  	font-weight: 700;
+			  	color: @blue-dark;
+			  	text-decoration: none;
+			  }
  			}
 		});
 		.part(text{
@@ -125,26 +130,37 @@
 			right: 20px;
 		});
 	});
+	
+	@search-width : 213px;
+	@search-offset-right: 20px;
+
 	.component(search{
 		.part(container{
 			position: fixed;
 			@media screen and (min-width: 768px) {
 				top: 73px;
 				left: auto;
-				right: 20px;
-				width: 213px;
+				right: @search-offset-right;
+				width: @search-width;
 				height: 34px;
-				z-index: @zindex-search;
 			}
 		});
 		.part(input{
 			@media screen and (min-width: 768px) {
-				background: none;
-				padding: 3px 20px;
+				width: 100%;
+				padding: 6px 40px 6px 20px;
 				.font-kanda(14px);
 				.round;
+				border: none;
+				// .transform(translateX(@search-width + @search-offset-right));
+				.opacity(0);
+				.transition(opacity .4s cubic-bezier(0.000, 0.795, 0.000, 1.000));
+				&:focus {
+					.transform(translateX(0));
+				}
 			}
 		});
+
 		.part(icon{
 			&:before {
 				border-color: @color-font-normal;
@@ -167,9 +183,8 @@
 			}
 			@media screen and (min-width: 768px) {
 				position: absolute;
-	  		top: 45px;
-	  		right: 20px;
-	  		z-index: @zindex-search-icon;
+	  		top: -8px;
+	  		right: 0px;
 				&:before {
 					border-color: @blue-grey;
 					top: 15px;
@@ -195,6 +210,10 @@
 			}
 		});
 	});
+
+		.search-is-visible + .search__input {
+			.opacity(1);
+		} 
 
 	.component(social{
 		.part(wrap{
