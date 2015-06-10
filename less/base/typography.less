@@ -1,5 +1,43 @@
-// .component(text{
-// 	.option(nav{
-// 		&:extend(.radio__text);
-// 	});
-// });
+.component(text{
+	.part(content{
+		font-family: @font-family-sans-serif;
+		.option(hilight{
+			font-weight: 700;
+			font-size: 18px;
+			color: @color-brand-primary;
+		});
+		.option(head{
+			font-weight: 700;
+			font-size: 14px;
+			color: @color-brand-primary;
+		});
+		.option(detail{
+			font-size: 14px;
+			color: @color-font-content;
+		});
+		.option(date{
+			font-size: 14px;
+			color: @color-font-less-imp;
+		});
+	});
+});
+
+// Page Header
+.component(text{
+	.part(head{
+		font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+		letter-spacing: 1px;
+		.option(author{
+			font-size: 13px;
+			color: @color-font-less-imp;
+		});
+		.option(date{
+			font-size: 16px;
+			color: @color-font-content;
+		});
+		.option(detail{ 
+			font-size: 14px;
+			color: rgb(51, 51, 51); 
+		});
+	});
+});
