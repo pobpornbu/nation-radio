@@ -1,4 +1,4 @@
-@dropdown-width       :       250px;
+@dropdown-width       :       260px;
 @dropdown-height      :       34px;
 
 .select-hidden {
@@ -25,8 +25,10 @@
   left: 0;
 
   // _theme
-  .theme-input-primary();
-
+  // .theme-input-primary();
+  .input-bg(@select-bg-theme);
+  color: @blue-dark;
+  
   // _size
   .input-text-height();
   padding: (@padding-vertical+2) @padding-horizontal;
@@ -41,20 +43,18 @@
     right: 10px;
     // _arrow
     border: 5px solid transparent;
-    border-color: @color-secondary transparent transparent transparent;
+    border-color: @blue-dark transparent transparent transparent;
   }
-  &:hover {
-    // background-color: darken(@color-secondary, 2);
-  }
+
   &:active, &.active {
-    background-color: @white;
-    border-color: extract(@button-outline-primary-border-theme, 3);
+    // background-color: @white;
+    // border-color: extract(@button-outline-primary-border-theme, 3);
     &:after {
       top: 9px;
-      border-color: transparent transparent @color-secondary transparent;
+      border-color: transparent transparent @blue-dark transparent;
     }
     &+.select__options {
-      border-color: extract(@button-outline-primary-border-theme, 3);
+      border-color: @blue-dark transparent transparent transparent;
     }
   }
 }
@@ -62,17 +62,19 @@
 .select__options {
   display: none; 
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   right: 0; 
   left: 0; 
   z-index: 999;
   margin: -1px 0 0 0; // overlapp with border-width
   padding: 0;
   list-style: none;
+  .box-shadow(0 0 3px fade(@blue-dark,50%));
 
   // _theme
-  background-color: @white;
-  .theme-input-primary();
+  background-color: lighten(@blue-light, 5%);
+  color: @blue-dark;
+  // .theme-input-primary();
 }
   .select__option {
     .input-text-height();
@@ -81,8 +83,8 @@
     // border-top: 1px solid darken(@color-secondary, 10);
     .transition(all 0.15s ease-in);
     &:hover {
-      color: @color-secondary;
-      background: @gray-step-11;
+      color: @white;
+      background: @blue-dark;
     }
     &[rel="hide"] {
       display: none;

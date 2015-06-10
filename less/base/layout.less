@@ -1,0 +1,95 @@
+#nation-radio-theme {
+	background-color: @color-bg-site;
+}
+
+.component(layout{
+	.part(container{
+		max-width: 1024px;
+		margin: 0 auto;
+		.option(main{
+			padding-top: 60px;
+			background-color: @color-bg-site;
+			@media screen and (min-width: 768px){
+				padding-top: 120px;
+			}
+
+			.container {
+				margin: 0;
+			}
+		});
+	});
+});
+
+.component(footer{
+	.part(wrap{
+		color: @white;
+		.option(top{
+			background-color: @color-brand-primary;
+			padding: 30px 0;
+		});
+		.option(bottom{
+			background-color: @blue-dark;
+			padding: 10px 0;
+			position: relative;
+		});
+		.option(link{
+			text-align: center;
+			position: absolute;
+			top: -30px;
+			width: 100%;
+			@media screen and (min-width: 768px) {
+				text-align: left;
+				top: 18px;
+				right: 15px;
+				width: auto;
+			}
+			.radio__text {
+				font-size: 12px;
+				@media screen and (min-width: 992px) {
+					font-size: 14px;
+				}
+			}
+		});
+		.option(social{
+			text-align: center;
+			margin-bottom: 20px;
+
+			@media screen and (min-width: 768px) {
+				text-align: right;
+				margin-right: 50px;
+			}
+			.social__icon {
+				#nation-radio-theme & {
+					@media screen and (min-width: 768px){
+						padding: 3px 0 0 5px;
+					}
+				}
+			}
+		});
+	});
+	.part(select{
+		.font-kanda(14px, 700);
+		text-align: center;
+		margin-bottom: 14px;
+		.select__wrap {
+			text-align: left;
+		}
+		@media screen and (min-width: 768px) {
+			text-align: left;
+			margin-left: 50px;
+		}
+	});
+	.part(address{
+		text-align: center;
+		margin-bottom: 0;
+		font-size: 12px !important;
+		@media screen and (min-width: 768px) {
+			text-align: left;
+		}
+		@media screen and (min-width: 992px) {
+			#nation-radio-theme & {
+				font-size: 14px !important;
+			}
+		}
+	});
+});
