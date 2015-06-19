@@ -182,9 +182,10 @@ lesshat-selector {
 @media screen and (min-width: 768px) {
   #nation-nav-theme .search__container {
     top: 73px;
-    left: auto;
-    right: 20px;
-    width: 213px;
+    left: 130px;
+    right: 15px;
+    width: auto;
+    max-width: 880px;
     height: 34px;
   }
 }
@@ -431,6 +432,43 @@ lesshat-selector {
   #nation-radio-theme .footer__address {
     font-size: 14px !important;
   }
+}
+.text__content {
+  font-family: Tahoma, Arial, sans-serif;
+}
+.text__content.\--hilight {
+  font-weight: 700;
+  font-size: 18px;
+  color: #2f4590;
+}
+.text__content.\--head {
+  font-weight: 700;
+  font-size: 14px;
+  color: #2f4590;
+}
+.text__content.\--detail {
+  font-size: 14px;
+  color: #404041;
+}
+.text__content.\--date {
+  font-size: 14px;
+  color: #a7a8aa;
+}
+.text__head {
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  letter-spacing: 1px;
+}
+.text__head.\--author {
+  font-size: 13px;
+  color: #a7a8aa;
+}
+.text__head.\--date {
+  font-size: 16px;
+  color: #404041;
+}
+.text__head.\--detail {
+  font-size: 14px;
+  color: #333333;
 }
 input,
 textarea,
