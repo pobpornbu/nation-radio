@@ -12,4 +12,12 @@
     });
   });
 
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 658) {
+      $('#nation-nav-theme').addClass('shrink');
+    } else {
+      $('#nation-nav-theme').removeClass('shrink');
+    }
+  });
+  
 })(jQuery);

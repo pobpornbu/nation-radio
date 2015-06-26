@@ -60,33 +60,58 @@
 		}
 	}
 
-.component(logo{
-	.part(container{
-		.option(large{
-			width: 100%;
-			height: 170px;
-			padding: 33px 0;
-			background: @color-brand-primary;
-		});
-		.option(small{
-			width: 50px;
-			height: 50px;
-			left: 62px;
-			top: 50%;
-			.transform(translateY(-50%));
-			background: url(../images/logo-nation-radio-small.png) no-repeat center/contain;
-			@media screen and (min-width: 768px){
-				width: 85px;
-				height: 100px;
-				margin: 0 15px;
-				left: 0;
-				background: url(../images/logo-nation-radio-large.png) no-repeat center/contain;
+	// menu shrink
+	.btn__play {
+		.transform(translateX(60px));
+		.transition(transform 1s ease-in);
+		display: none;
+		position: relative;
+		top: -3px;
+		padding: 15px 17px;
+		color: @white;
+		background-color: @blue-dark;
+		font-size: 30px;
+	}
+
+	&.shrink {
+		.btn__play { 
+			.transform(translateX(0px));
+			display: block; 
+		}
+		@media screen and (min-width: 768px) {
+			.btn__play{
+				display: none;
 			}
+		}
+	}
+
+	.component(logo{
+		.part(container{
+			.option(large{
+				width: 100%;
+				height: 170px;
+				padding: 33px 0;
+				background: @color-brand-primary;
+			});
+			.option(small{
+				width: 50px;
+				height: 50px;
+				left: 62px;
+				top: 50%;
+				.transform(translateY(-50%));
+				background: url(../images/logo-nation-radio-small.png) no-repeat center/contain;
+				@media screen and (min-width: 768px){
+					width: 85px;
+					height: 100px;
+					margin: 0 15px;
+					left: 0;
+					background: url(../images/logo-nation-radio-large.png) no-repeat center/contain;
+				}
+			});
 		});
-	});
-	.option(large{
-		display: inline-block;
-		width: 80px;
+		.option(large{
+			display: inline-block;
+			width: 80px;
 		});
 	});
 
