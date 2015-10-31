@@ -54,7 +54,7 @@ Main components
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  will-change: transform; }
+}
 
 .cd-main-content, .cd-main-header {
   position: relative;
@@ -76,7 +76,6 @@ Main components
       transform: translateX(260px); } }
 
 .cd-main-content {
-  background: #e2e3df;
   min-height: 100vh;
   z-index: 2; }
 
@@ -341,7 +340,6 @@ Main components
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
-    will-change: transform, opacity;
     -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
     -moz-transition: -moz-transform 0.3s, opacity 0.3s;
     transition: transform 0.3s, opacity 0.3s; }

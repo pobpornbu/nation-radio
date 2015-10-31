@@ -1,43 +1,65 @@
-.component(text{
-	.part(content{
+
+// Page Header
+.component(head{
+		font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+		letter-spacing: 1px;
+
+		.option(section{
+			font-size: 24px;
+			font-weight: 700;
+			color: @brand-primary;
+		});
+		// .option(author{
+		// 	font-size: 13px;
+		// 	color: @color-font-header;
+		// });
+		// .option(date{
+		// 	font-size: 16px;
+		// 	color: @color-font-content;
+		// });
+		.option(more{ 
+			font-size: 12px;
+			font-weight: 700;
+			color: @brand-primary;
+			font-style: italic;
+		});
+		.option(caption{
+			font-size: 14px;
+			color: @white;
+			margin-bottom: 0;
+		});
+		.option(tab{
+			font-size: 12px;
+			font-weight: 400;
+			color: @ultra-light-blue-6;
+		});
+});
+
+.component(content{
 		font-family: @font-family-sans-serif;
+
 		.option(hilight{
 			font-weight: 700;
 			font-size: 18px;
-			color: @color-brand-primary;
+			color: @brand-primary;
+			line-height: 1.3;
+			margin-top: 0;
+		});		
+		.option(hilight-detail{
+			font-size: 14px;
+			color: @color-font-content;
+		});		
+		.option(headline{
+			font-size: 12px;
+			color: @color-font-content;
 		});
 		.option(head{
 			font-weight: 700;
 			font-size: 14px;
-			color: @color-brand-primary;
-		});
-		.option(detail{
-			font-size: 14px;
-			color: @color-font-content;
+			color: @brand-primary;
 		});
 		.option(date{
-			font-size: 14px;
-			color: @color-font-less-imp;
+			font-size: 12px;
+			color: @color-font-header;
 		});
-	});
-});
-
-// Page Header
-.component(text{
-	.part(head{
-		font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
-		letter-spacing: 1px;
-		.option(author{
-			font-size: 13px;
-			color: @color-font-less-imp;
-		});
-		.option(date{
-			font-size: 16px;
-			color: @color-font-content;
-		});
-		.option(detail{ 
-			font-size: 14px;
-			color: rgb(51, 51, 51); 
-		});
-	});
 });

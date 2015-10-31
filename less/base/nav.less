@@ -1,6 +1,6 @@
 #nation-nav-theme {
 	.cd-main-header {
-		background: @color-brand-primary;
+		background: @brand-primary;
 		position: fixed;
 	  width: 100%;
 	  top: 0;
@@ -13,6 +13,7 @@
 		}
 		@media screen and (min-width: 768px){
 			height: 120px;
+			padding: 0;
 		}
 	}
 
@@ -41,7 +42,7 @@
 	}
 
 	.cd-primary-nav {
-		background: @blue-dark;
+		background: @dark-blue;
 		// .box-shadow(1px 6px 5px rgba(0,0,0,0.24));
 		padding: 0;
 		@media screen and (min-width: 768px) {
@@ -50,13 +51,6 @@
 			float: none;
 			margin-left: 120px;
 			height: 120px;
-		}
-	}
-
-	.main__container {
-		padding-top: 60px;
-		@media screen and (min-width: 768px){
-			padding-top: 120px;
 		}
 	}
 
@@ -69,7 +63,7 @@
 		top: -3px;
 		padding: 15px 17px;
 		color: @white;
-		background-color: @blue-dark;
+		background-color: @dark-blue;
 		font-size: 30px;
 	}
 
@@ -87,18 +81,13 @@
 
 	.component(logo{
 		.part(container{
-			.option(large{
-				width: 100%;
-				height: 170px;
-				padding: 33px 0;
-				background: @color-brand-primary;
-			});
-			.option(small{
+			.option(topbar{
 				width: 50px;
 				height: 50px;
-				left: 62px;
+				left: 60px;
 				top: 50%;
 				.transform(translateY(-50%));
+				margin: 0;
 				background: url(../images/logo-nation-radio-small.png) no-repeat center/contain;
 				@media screen and (min-width: 768px){
 					width: 85px;
@@ -108,8 +97,14 @@
 					background: url(../images/logo-nation-radio-large.png) no-repeat center/contain;
 				}
 			});
+			.option(sidebar{
+				width: 100%;
+				height: 170px;
+				padding: 33px 0;
+				background: @brand-primary;
+			});
 		});
-		.option(large{
+		.option(sidebar{
 			display: inline-block;
 			width: 80px;
 		});
@@ -121,12 +116,12 @@
 				margin-left: 25px;
 			}
 			@media screen and (min-width: 900px) {
-				margin-left: 30px;
+				margin-left: 20px;
 			}
 		});
 		.part(link{
 			color: @color-font-normal;
-			border-bottom: 1px solid @color-brand-primary;	
+			border-bottom: 1px solid @brand-primary;	
 			.font-kanda(14px, 700);	
 			&:hover {
 				text-decoration: none;
@@ -139,10 +134,10 @@
 			  height: 60px;
 			  line-height: normal;
 			  margin-top: 60px;
-			  padding: 16px 0px;
+			  padding: 16px 10px;
 			  &:hover, &:active, &:visited, &:focus {
 			  	font-weight: 700;
-			  	color: @blue-dark;
+			  	color: @dark-blue;
 			  	text-decoration: none;
 			  }
  			}
@@ -150,9 +145,12 @@
 		.part(text{
 			.font-kanda(14px);
 			color: @white;
-			position: absolute;
-			top: 22px;
-			right: 20px;
+
+			.option(date{
+				position: absolute;
+				top: 15px;
+				right: 20px;
+			});
 		});
 	});
 	
@@ -163,7 +161,7 @@
 		.part(container{
 			position: fixed;
 			@media screen and (min-width: 768px) {
-				top: 73px;
+				top: 65px;
 				left: 130px;
 				right: @search-offset-right - 5;
 				width: auto;
@@ -252,7 +250,7 @@
 				width: 100%;
 				margin-left: 0;
 				padding: 0 20px;
-				background-color: @blue-dark;
+				background-color: @dark-blue;
 				&:before {
 					content: "Follow Us : ";
 					.font-kanda(14px);
@@ -265,7 +263,7 @@
 		.part(icon{
 			display: inline-block;
 			font-size: 25px;
-			padding: 0 10px 0 0;
+			padding: 0 5px 0 0;
 			color: @color-icon-social;
 			&:hover {
 				color: @white;
@@ -273,7 +271,7 @@
 			@media screen and (min-width: 768px){
 				height: auto;
 				line-height: 1;
-				padding: 10px 0 7px 5px;
+				padding: 12px 0 12px 5px;
 			}
 		});
 	});
@@ -281,3 +279,5 @@
 		background: none;
 	}
 }
+
+

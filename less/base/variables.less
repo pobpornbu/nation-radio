@@ -1,11 +1,35 @@
 // Color
+@screen-sm-min 													: 								768px;
 
 @white 																	: 								rgba(255, 255, 255, 1);
 @black 																	: 								rgb(0, 0, 0);
 @grey 																	: 								rgb(155, 155, 155);
 
-@color-brand-primary										: 								rgb(47, 69, 144);
-@color-brand-secondary 									: 								rgb(204, 204, 204);
+@brand-primary										      : 								rgb(47, 69, 144);
+@brand-secondary 									      : 								rgb(204, 204, 204);
+@brand-hilight 													: 								rgb(246, 179, 0);
+
+@darkest-blue 													: 								darken(@brand-primary, 30%);  // rgb(9, 14, 29)
+@darker-blue   													: 								darken(@brand-primary, 20%);  // rgb(22, 32, 67)
+@dark-blue															: 								darken(@brand-primary, 10%);  // rgb(34, 51, 106)
+
+@light-blue 														: 								lighten(@brand-primary, 10%); // rgb(60, 87, 182)
+@lighter-blue 													: 								lighten(@brand-primary, 20%); // rgb(91, 116, 202)
+@ultra-light-blue 											: 								lighten(@brand-primary, 30%); // rgb(130, 149, 214)
+@ultra-light-blue-2 										: 								lighten(@brand-primary, 40%); // rgb(168, 182, 227)
+@ultra-light-blue-3 										: 								lighten(@brand-primary, 50%); // rgb(207, 214, 239)
+@ultra-light-blue-4 										: 								lighten(@brand-primary, 55%); // rgb(245, 247, 252)
+@ultra-light-blue-5 										: 								lighten(@brand-primary, 57%); // rgb(234, 237, 248)
+@ultra-light-blue-6 										: 								lighten(@brand-primary, 60%); // rgb(245, 247, 252)
+
+@gray-darkest 													: 								rgb(51, 51, 51);
+@gray-darker														: 								rgb(102, 102, 102);
+@gray-dark															: 								rgb(153, 153, 153);
+@gray-medium 														: 								rgb(165, 165, 165);
+@gray 																	: 								rgb(187, 187, 187);
+@gray-light 														:									rgb(204, 204, 204);
+@gray-lighter 													: 								rgb(238, 238, 238);
+@disable 																: 								@gray;
 
 @blue-dark 															: 								rgb(34, 50, 102);
 @blue-medium 														: 								rgb(36, 54, 134);
@@ -21,7 +45,7 @@
 
 @color-font-normal 											: 								rgba(255,255,255,0.5);
 @color-font-content 									  : 								rgb(64, 64, 65);
-@color-font-less-imp 									  : 								rgb(167, 168, 170);
+@color-font-header 									  	: 								rgb(167, 168, 170);  		// #a7a8aa
 
 @color-icon-social 											: 								rgba(247,247,247,0.5);
 
@@ -53,6 +77,9 @@
 
 @button-radio-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1);
 @button-radio-color-theme: rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(47, 69, 144, 0.7);
+
+@slider-bullet   												: 								@gray-medium;
+@slider-bullet-active 									: 								@brand-primary; 														
 
 //___________________Select___________________
 

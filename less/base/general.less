@@ -1,15 +1,31 @@
+// layout
+.clearfix{
+	&:before, &:after {
+		display: table;
+    content: " ";
+	}
+	&:after {
+		clear: both;
+	}
+}
+.gap-row-top {
+  margin-top: 30px;
+}
+.gap-row-bottom {
+  margin-bottom: 30px;
+}
+.gap-inner-top {
+  margin-top: 15px;
+}
+.gap-inner-bottom {
+  margin-bottom: 15px;
+}
+
 .rel {
 	position: relative;
 }
 
-.round {
-  .border-radius(1000px);
-}
-
-.radius {
-	.border-radius(3px);
-}
-
+// Blink animation
 .keyframes(~'blinker,0% { opacity: 1; } 5% { opacity: 0; } 10% { opacity: 1; } 15% { opacity: 0; } 20% { opacity: 1; } 100% { opacity: 1; }');
 
 .inline-block {
@@ -20,4 +36,53 @@
 	list-style: none none outside;
 	padding: 0;
 	margin: 0;
+}
+
+// border
+.round {
+  .border-radius(1000px);
+}
+.radius {
+	.border-radius(3px);
+}
+.border-section {
+	border-top: 4px solid @brand-primary;
+	display: block;
+	padding-top: 15px;
+}
+.bordered-block {
+	border: 2px solid @gray-lighter;
+	padding: 5px;
+	@media screen and (min-width: @screen-sm-min){
+	 	border: 2px solid @white;
+	}
+	@media screen and (min-width: @screen-md-min){
+		padding: 3px;
+	}
+}
+
+// background
+.bg-brand {
+	background-color: @brand-primary;
+}
+.bg-primary {
+	background-color: @dark-blue;
+}
+.bg-secondary {
+	background-color: @ultra-light-blue-5;
+}
+.bg-light {
+	background-color: @white;
+}
+
+// Slider
+.slider-change-bullet-color {
+	.lSSlideOuter .lSPager.lSpg>li {
+		a {
+			background-color: @slider-bullet;
+		}
+		&.active a, &:hover a {
+			background-color: @slider-bullet-active;
+		}
+	}
 }
