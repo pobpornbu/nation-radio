@@ -1,5 +1,10 @@
-// Color
+//##Screen
+
+@screen-xs-max 													: 								767px;
 @screen-sm-min 													: 								768px;
+@screen-sm-max 													: 								991px;
+@screen-md-min 													: 								992px;
+
 
 @white 																	: 								rgba(255, 255, 255, 1);
 @black 																	: 								rgb(0, 0, 0);
@@ -68,15 +73,30 @@
 
 //___________________Input___________________
 
-@input-primary-bg-color-theme: rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(232,234,235),rgb(255, 255, 255);
+@input-primary-bg-color-theme: @white ,@white ,@white ,rgb(232,234,235),@white ;
 @input-primary-border-color-theme: rgb(211,213,216),rgb(82,210,202),rgb(54,188,178),rgb(222,31,9),rgb(188,192,196);
 @input-primary-font-color-theme: rgb(167,171,176),rgb(167,171,176),rgb(34,45,58),rgb(188,192,196),rgb(34,45,58);
 
+//___________________Button Outline_________________
+// Primary theme color
+@button-outline-primary-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgb(54,188,178), rgb(232,234,235), rgb(222,31,9);
+@button-outline-primary-color-theme: rgb(82,210,202),rgb(117,219,213), @white , rgb(188,192,196), rgb(222,31,9);
+@button-outline-primary-border-theme: rgb(82,210,202), rgb(117,219,213), rgb(54,188,178), rgb(188,192,196), rgb(222,31,9);
+
+// Secondary theme color
+@button-outline-secondary-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgb(54,188,178), rgb(232,234,235), rgb(222,31,9);
+@button-outline-secondary-color-theme: rgb(122,129,137),rgb(117,219,213), @white , rgb(188,192,196), rgb(222,31,9);
+@button-outline-secondary-border-theme: rgb(122,129,137),rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
+
+@button-solid-primary-theme: rgb(82,210,202),rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
+@button-solid-font-color-theme: @white ,@white ,@white ,@white ,rgb(222,31,9);
 
 //___________________Button___________________
 
 @button-radio-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1);
 @button-radio-color-theme: rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(47, 69, 144, 0.7);
+
+@input-radio-color-theme: @brand-primary, fade(@brand-primary, 50%), fade(@brand-primary, 80%), @disable;
 
 @slider-bullet   												: 								@gray-medium;
 @slider-bullet-active 									: 								@brand-primary; 														
@@ -85,6 +105,27 @@
 
 @select-bg-theme: fade(@white, 20%), fade(@white,50%), fade(@white,50%);
 
+//___________________Social___________________
+
+//Facebook
+@button-facebook-bg-color-theme: rgb(59,87,157), rgb(73,111,173), rgb(45,74,132), rgb(188,192,196);
+
+//Twitter
+@button-twitter-bg-color-theme: rgb(51,204,255), rgb(84,216,252), rgb(0,187,237), rgb(188,192,196);
+
+// Google Plus
+@button-googleplus-bg-color-theme: rgb(222,77,56), rgb(247,91,75), rgb(206,59,44), rgb(188,192,196);
+
+//___________________Zindex___________________
+
+@zindex-overlay 												: 								1500;
+@zindex-breakingnews-head 							: 								1400;
+@zindex-breakingnews-list 							: 								1300;
+@zindex-logo-small 											: 								1002;
 @zindex-search-icon 										: 								1001;
 @zindex-search 													: 								1000;
 @zindex-topbar 													: 								 999;
+@zindex-search-icon-sm									:										15;
+@zindex-search-input-sm-visible         :										12;
+@zindex-menu-item-sm										: 									10;
+@zindex-search-input-sm-hidden 					:										 9;

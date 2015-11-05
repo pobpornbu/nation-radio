@@ -67,7 +67,7 @@
 // Thumbnail News List
 .l-article__group {
 	border-top: 1px solid @gray-light;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 	.l-article__list {
 		.clearfix();
@@ -130,21 +130,10 @@
 					}
 	}
 
-#bx-pager {
-	display: none;
-	@media screen and (min-width: @screen-sm-min) {
-		display: block;
-		span {
-			display: block;
-			float: left;
-			width: 80px;
-			height: 80px;
-			margin-right: 10px;
-		}
-	}
-}
 .tab__container {
-	padding-right: 0 !important;
+	@media screen and (min-width: @screen-sm-min) {
+		padding-right: 0 !important;
+	}
 }
 	.tab__section {
 		height: 370px;

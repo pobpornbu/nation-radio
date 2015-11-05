@@ -188,7 +188,7 @@ input[type=checkbox]:checked + .input__checkbox:before {
 }
 input[type=radio]:checked + .input--primary:before,
 input[type=checkbox]:checked + .input--primary:before {
-  color: @color-primary;
+  color: @brand-primary;
 }
 
 // Breakingnews
@@ -206,7 +206,7 @@ input[type=checkbox]:checked + .input--primary:before {
       background-color: @white;
       content: '';
       display: block;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0; 
       width:100%;
@@ -298,7 +298,7 @@ input[type=checkbox]:checked + .input--primary:before {
     &__icon{
       font-size: 10px;
       line-height: 1.9;
-      vertical-align: top;      
+      vertical-align: middle;      
     }
     &__scroller{
       width: 100%;
