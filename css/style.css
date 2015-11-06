@@ -1923,3 +1923,25 @@ width:calc(100% - 80px);
 #radio-page .prevclip__container {
   margin-bottom: 20px;
 }
+.about-section {
+  padding: 5px 15px;
+}
+.executive-list {
+  list-style: none none outside;
+  padding: 0;
+  margin: 0;
+}
+.executive-list strong {
+  display: block;
+}
+.executive-list span {
+  display: block;
+  text-indent: 15px;
+  margin: 5px 0;
+}
+.executive-list .executive-sub-list {
+  list-style: disc outside;
+}
+.executive-list .executive-sub-list strong {
+  font-weight: 400;
+}
