@@ -1,11 +1,11 @@
 .button-typo(@font-size: 13px) {
-  font-family: @font-family-sans-serif;
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
   font-weight: 400;
   font-size: @font-size;
 }
 
 .button-size-normal {
-  padding: 6px 20px;
+  padding: 6px 15px;
 }
 .button-size-icon {
   padding: 6px 20px 6px 40px;
@@ -20,13 +20,10 @@
     -webkit-appearance: none;
   }
   .option(solid-primary{
-    .input-style(@button-solid-primary-theme; @button-solid-font-color-theme; @button-solid-primary-theme);
+    .input-style(@button-solid-primary-theme; @white; @button-solid-primary-theme);
   });
   .option(outline-primary {
     .input-style(@button-outline-primary-bg-theme; @button-outline-primary-color-theme; @button-outline-primary-border-theme);
-  });
-  .option(outline-secondary {
-    .input-style(@button-outline-secondary-bg-theme; @button-outline-secondary-color-theme; @button-outline-secondary-border-theme);
   });
 
   .option(icon {
@@ -40,20 +37,20 @@
   .option(expand{
     width: 100%;
   });
-  .option(facebook {
-    color: rgb(255, 255, 255);
-    .input-bg(@button-facebook-bg-color-theme);
-    &:before {
-      font-size: 26px;
-      top: 2px;
-      left: 50%;
-      margin-left: -70px;
-    }
-  });
+  // .option(facebook {
+  //   color: @white;
+  //   .input-bg(@button-facebook-bg-color-theme);
+  //   &:before {
+  //     font-size: 26px;
+  //     top: 2px;
+  //     left: 50%;
+  //     margin-left: -70px;
+  //   }
+  // });
   .option(play {
     max-width: 490px; 
     padding: 12px 20px 12px 40px;
-    .button-outline(@button-radio-bg-theme; @button-radio-color-theme; rgba(255,255,255,1); 2px);
+    .button-outline(@button-radio-bg-theme; @button-radio-color-theme; @white; 2px);
     // color: @blue-purple;
     // background: @white;
     margin-bottom: @gap-row;
@@ -71,4 +68,22 @@
       left: 20px;
     }
   });
+    // Share button
+  .option(facebook {
+    .input-style(@button-facebook-bg-color-theme, @white, @button-facebook-bg-color-theme);
+  });
+  .option(twitter {
+    .input-style(@button-twitter-bg-color-theme, @white, @button-twitter-bg-color-theme);
+  });
+  .option(googleplus {
+    .input-style(@button-googleplus-bg-color-theme, @white, @button-googleplus-bg-color-theme);
+  });
+
+  .option(social {
+    .button__icon {
+      font-size: 20px;
+      margin-right: 5px;
+    }
+  });
+
 });

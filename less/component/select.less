@@ -1,6 +1,7 @@
 @dropdown-width       :       260px;
 @dropdown-height      :       34px;
 
+select { display: none; }
 .select-hidden {
   display: none;
   visibility: hidden;
@@ -55,6 +56,7 @@
     }
     &+.select__options {
       border-color: @blue-dark transparent transparent transparent;
+      // .bordercolor(@input-primary-border-theme);
     }
   }
 }
@@ -62,19 +64,14 @@
 .select__options {
   display: none; 
   position: absolute;
-  bottom: 100%;
+  top: 100%;
   right: 0; 
   left: 0; 
   z-index: 999;
   margin: -1px 0 0 0; // overlapp with border-width
   padding: 0;
   list-style: none;
-  .box-shadow(0 0 3px fade(@blue-dark,50%));
-
-  // _theme
-  background-color: lighten(@blue-light, 5%);
-  color: @blue-dark;
-  // .theme-input-primary();
+  background-color: @white;
 }
   .select__option {
     .input-text-height();
@@ -90,3 +87,69 @@
       display: none;
     }
   }
+
+.i-footer {
+  .select__options {
+    top: auto;
+    bottom: 100%;
+    .box-shadow(0 0 3px fade(@blue-dark,50%));
+    background-color: lighten(@blue-light, 5%);
+    color: @blue-dark;
+  }
+}
+
+// .i-contact {
+//   .select__options {
+//     border-color: rgba(0, 0, 0, 0) rgb(204, 204, 204) rgb(204, 204, 204) rgb(204, 204, 204);
+//     border-width: 1px;
+//     border-style: solid;
+//   }
+// }
+@select-sm-padding : 6px 10px;
+
+@select-bg-theme: fade(@white, 20%), fade(@white,50%), fade(@white,50%);
+@select-outline-primary-border-theme: @gray,        @brand-primary, @brand-primary, @gray;
+@select-outline-primary-bg-theme:     @white,       @white,         @white,         @gray-lighter;
+@select-outline-primary-color-theme:  @gray-darker, @gray-darker,   @gray-darker,   @gray;
+
+.select.\--outline-primary {
+  .select__wrap {
+    .input-font;
+    .border-radius(8px);
+  }
+  .select__selected {
+    .radius;
+    color: @gray-darker;
+    padding: @select-sm-padding;
+    .transition(initial);
+    .input-style(@select-outline-primary-bg-theme; @select-outline-primary-color-theme; @select-outline-primary-border-theme);
+    &.active, &:active {
+      .border-radius(8px 8px 0 0);
+      &:after {
+        top: 10px;
+      }
+    }
+    &:after {
+      top: 14px;
+    }
+    +.select__options {
+      border-left: 1px solid @brand-primary;
+      border-right: 1px solid @brand-primary;
+      border-bottom: 1px solid @brand-primary;
+    }
+  }
+  .select__options {
+    background-color: @white;
+    .border-radius(0 0 8px 8px);
+  }
+  .select__option {
+    padding: @select-sm-padding;
+    &:hover {
+      background: @brand-primary;
+      color: @white;
+    }
+    &:last-child:hover {
+      .border-radius(0 0 8px 8px);      
+    }
+  }
+}

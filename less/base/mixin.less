@@ -188,3 +188,10 @@
 		color: extract(@color,4);
 	}
 }
+
+
+.gap(@dir: top; @level: 30) {
+	.gap-@{dir}-@{level} {
+		margin-@{dir}: @level;
+	}
+}

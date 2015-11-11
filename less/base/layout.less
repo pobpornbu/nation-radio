@@ -3,13 +3,6 @@
 		background-color: @color-bg-site;
 	}
 }
-	
-.main__container {
-	padding-top: 60px;
-	@media screen and (min-width: 768px){
-		padding-top: 120px;
-	}
-}
 
 .section-container {
 	margin-top: 30px;
@@ -24,6 +17,13 @@
 				max-width: none;
 			}
 		}
+
+.main__container {
+	background: @white;
+	@media screen and (min-width: @screen-sm-min) {
+		background: none;
+	}
+}
 
 @media screen and (min-width: @screen-sm-min) {
 	.section-equal-bg {
@@ -146,3 +146,17 @@
 		}
 	});
 });
+
+.static .radio__container {
+	@media screen and (max-width: @screen-xs-max) {
+		display: none;
+	}
+}
+
+// Ads ============================================
+.ads-top-menu {
+	padding: 15px 0;
+}
+.ads-top, .ads-bottom {
+	max-width: 315px;
+}

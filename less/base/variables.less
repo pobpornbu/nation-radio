@@ -9,6 +9,7 @@
 @white 																	: 								rgba(255, 255, 255, 1);
 @black 																	: 								rgb(0, 0, 0);
 @grey 																	: 								rgb(155, 155, 155);
+@transparent														:									rgba(255, 255, 255, 0);
 
 @brand-primary										      : 								rgb(47, 69, 144);
 @brand-secondary 									      : 								rgb(204, 204, 204);
@@ -45,7 +46,7 @@
 
 @color-bg-site													: 								rgb(236, 236, 236);
 
-@color-border-primary 									: 								rgb(47,69,143);
+@color-border-primary 									: 								@brand-primary;
 
 
 @color-font-normal 											: 								rgba(255,255,255,0.5);
@@ -61,6 +62,11 @@
 @orange-darkest 												: 								rgb(249, 192, 70);
 
 @font-family-sans-serif  								: 								Tahoma, Arial, sans-serif;
+
+.font-head {
+	font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+	letter-spacing: 1px;
+}
 .font-kanda(@font-size: 16px; @font-weight: 400; @letter-spacing: 1px) {
 	font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
 	font-size: @font-size;
@@ -71,50 +77,46 @@
 @gap-row  															: 								20px;
 @gap-element 														: 								15px;
 
-//___________________Input___________________
+@input-disabled 											  : 								rgb(247,91,75);
 
-@input-primary-bg-color-theme: @white ,@white ,@white ,rgb(232,234,235),@white ;
-@input-primary-border-color-theme: rgb(211,213,216),rgb(82,210,202),rgb(54,188,178),rgb(222,31,9),rgb(188,192,196);
-@input-primary-font-color-theme: rgb(167,171,176),rgb(167,171,176),rgb(34,45,58),rgb(188,192,196),rgb(34,45,58);
+@input-primary-bg-theme									: @white, @white, @white, @gray-lighter, @white; 
+@input-primary-color-theme							: @gray-dark, @gray-dark, @gray-darkest, @gray-darkest, @gray;
+@input-primary-border-theme							: @gray-light, @color-border-primary, @color-border-primary, @input-disabled, @gray;
 
-//___________________Button Outline_________________
-// Primary theme color
-@button-outline-primary-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgb(54,188,178), rgb(232,234,235), rgb(222,31,9);
-@button-outline-primary-color-theme: rgb(82,210,202),rgb(117,219,213), @white , rgb(188,192,196), rgb(222,31,9);
-@button-outline-primary-border-theme: rgb(82,210,202), rgb(117,219,213), rgb(54,188,178), rgb(188,192,196), rgb(222,31,9);
+@button-outline-primary-bg-theme				: @transparent, @transparent, @brand-primary, @gray-lighter;
+@button-outline-primary-color-theme			: @brand-primary, tint(@brand-primary, 20%), @white, @gray;
+@button-outline-primary-border-theme		: @brand-primary, tint(@brand-primary, 20%), @brand-primary, @gray;
 
-// Secondary theme color
-@button-outline-secondary-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgb(54,188,178), rgb(232,234,235), rgb(222,31,9);
-@button-outline-secondary-color-theme: rgb(122,129,137),rgb(117,219,213), @white , rgb(188,192,196), rgb(222,31,9);
-@button-outline-secondary-border-theme: rgb(122,129,137),rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
+@button-outline-secondary-bg-theme			: @ultra-light-blue-5, @ultra-light-blue-5, @brand-primary, @gray-lighter;
 
-@button-solid-primary-theme: rgb(82,210,202),rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
-@button-solid-font-color-theme: @white ,@white ,@white ,@white ,rgb(222,31,9);
+@button-solid-primary-theme 						: @brand-primary  , tint(@brand-primary, 15%), darken(@brand-primary, 10%), @brand-secondary;
+@button-solid-secondary-theme 					: @brand-secondary, tint(@brand-secondary, 15%), darken(@brand-secondary, 10%), @brand-secondary;
 
-//___________________Button___________________
+@button-radio-bg-theme									: @transparent, rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5);
+@button-radio-color-theme								: rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(47, 69, 144, 0.7);
 
-@button-radio-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 1);
-@button-radio-color-theme: rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(47, 69, 144, 0.7);
+@input-radio-color-theme								: @gray-lighter, @brand-primary, tint(@brand-primary, 15%), @input-disabled, @gray;
+@input-dropdown-color-theme							: @transparent, @gray-lighter, @brand-primary, @transparent, @input-disabled;
 
-@input-radio-color-theme: @brand-primary, fade(@brand-primary, 50%), fade(@brand-primary, 80%), @disable;
+@select-bg-theme 												: fade(@white, 20%), fade(@white,50%), fade(@white,50%);
+
+@select-outline-primary-border-theme		: @gray, 				@brand-primary, @brand-primary, @gray;
+@select-outline-primary-bg-theme				: @white, 			@white, 				@white, 				@gray-lighter;
+@select-outline-primary-color-theme			: @gray-darker, @gray-darker, 	@gray-darker, 	@gray;
 
 @slider-bullet   												: 								@gray-medium;
 @slider-bullet-active 									: 								@brand-primary; 														
 
-//___________________Select___________________
-
-@select-bg-theme: fade(@white, 20%), fade(@white,50%), fade(@white,50%);
-
 //___________________Social___________________
 
 //Facebook
-@button-facebook-bg-color-theme: rgb(59,87,157), rgb(73,111,173), rgb(45,74,132), rgb(188,192,196);
+@button-facebook-bg-color-theme					: rgb(59,87,157), rgb(73,111,173), rgb(45,74,132), rgb(188,192,196);
 
 //Twitter
-@button-twitter-bg-color-theme: rgb(51,204,255), rgb(84,216,252), rgb(0,187,237), rgb(188,192,196);
+@button-twitter-bg-color-theme					: rgb(51,204,255), rgb(84,216,252), rgb(0,187,237), rgb(188,192,196);
 
 // Google Plus
-@button-googleplus-bg-color-theme: rgb(222,77,56), rgb(247,91,75), rgb(206,59,44), rgb(188,192,196);
+@button-googleplus-bg-color-theme				: rgb(222,77,56), rgb(247,91,75), rgb(206,59,44), rgb(188,192,196);
 
 //___________________Zindex___________________
 
