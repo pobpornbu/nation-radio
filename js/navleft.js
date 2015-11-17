@@ -47,7 +47,7 @@ jQuery(document).ready(function($){
 	});
 	$('.cd-overlay').on('click', function(){
 		closeNav();
-		toggleSearch('close')
+		toggleSearch('close');
 		$('.cd-overlay').removeClass('is-visible');
 	});
 

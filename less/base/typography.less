@@ -4,6 +4,9 @@ a[rel="nofollow"] {
 		text-decoration: underline;
 	}
 }
+
+mark { background: none !important; padding: 0 !important; }
+
 // Page Header
 .component(head {
 		.font-head;
@@ -51,20 +54,6 @@ a[rel="nofollow"] {
 				font-size: 14px;
 			}		
 		});
-		.option(link-primary {
-			color: inherit;
-			&:hover, &:active, &:focus {
-				text-decoration: underline;
-				color: @brand-primary;
-			}
-		});
-		.option(link-secondary {
-			color: inherit;
-			&:hover, &:active, &:focus {
-				text-decoration: underline;
-				color: @brand-hilight;
-			}
-		});		
 
 		// About
 		.option(large {
@@ -106,6 +95,7 @@ a[rel="nofollow"] {
 			color: @color-font-content;
 		});	
 		.option(headline{
+			display: block;
 			font-size: 12px;
 			color: @color-font-content;
 		});
@@ -115,7 +105,31 @@ a[rel="nofollow"] {
 			color: @brand-primary;
 		});
 		.option(date{
+			display: block;
 			font-size: 12px;
 			color: @color-font-header;
 		});
 });
+
+.option(link-primary {
+	color: inherit;
+	&:hover, &:active, &:focus {
+		text-decoration: underline;
+		color: @brand-primary;
+		mark {
+			text-decoration: underline;
+			color: @brand-primary;
+		}	
+	}
+});
+.option(link-secondary {
+	color: inherit;
+	&:hover, &:active, &:focus {
+		text-decoration: underline;
+		color: @brand-hilight;
+		mark {
+			text-decoration: underline;
+			color: @brand-hilight;
+		}	
+	}
+});		
