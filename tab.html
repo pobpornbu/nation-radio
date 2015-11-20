@@ -23,16 +23,15 @@
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tab.css">
   <link rel="stylesheet" href="css/navleft.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="bower_components/lightslider/dist/css/lightslider.min.css">
   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-  <link rel="stylesheet" href="css/jquery.bxslider.min.css">
+  <!-- <link rel="stylesheet" href="css/jquery.bxslider.min.css"> -->
   <link rel="stylesheet" href="css/tab.min.css">
-  <link rel="stylesheet" href="css/tooltipster-shadow.css">
-  <link rel="stylesheet" href="css/tooltipster.css">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -92,8 +91,8 @@
 <body id="nation-radio-theme" class="nav-on-left">
   <div id="nation-nav-theme">
     <header class="cd-main-header layout__container">
-      <h1 class="cd-logo logo__container --topbar">
-        <a href="index.html"></a>
+      <h1 class="cd-logo">
+        <a class="logo__container --topbar" href="index.html"></a>
       </h1> 
 
       <ul class="cd-header-buttons">
@@ -111,7 +110,7 @@
       </ul> <!-- cd-header-buttons -->
     </header>
 
-    <main class="cd-main-content main__container static result">
+    <main class="cd-main-content main__container">
       <!-- your content here -->
       <div class="layout__container">
         <div class="row hidden-xs">
@@ -182,141 +181,202 @@
             </main>
           </section>
           <div class="col-sm-8 hilight__container --lastestnews">
-            <article class="static-section i-contact hilight__section section-max-xs">
-              <section class="gap-row-bottom">
-                <h2 class="head --section border-section">ผลการค้นหา <mark class="text-searched">- โลก</mark></h2>
-              </section>
-              <section class="row">
-                    <article class="result__wrap col-sm-6">
+            <section class="hilight__section section-max-xs">
+              <div class="hilight__block">
+                <div class="col-sm-12">
+                    <h2 class="head --section border-section">ข่าวล่าสุด</h2>
+                    <div class="slider-change-bullet-color">
+                      <ul class="js-lastestnews">
+                        <li>
+                          <div class="image__group">
+                            <img src="http://lorempixel.com/615/350" alt="ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา">
+                          </div>
+                          <div class="content__group bg-secondary">
+                            <div class="content__wrap">
+                              <h3 class="content --hilight">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา</h3>
+                              <p class="content --hilight-detail">ทีมเฮลิคอปเตอร์กู้ภัย ได้อพยพนักปีนเขาที่ได้รับ บาดเจ็บสาหัสออกจากเบสแคมป์ บนยอดเขา เอฟเวอเรสต์ หลังจากความพยายามเมื่อวันที่</p>
+                              <span class="head --more">อ่านต่อ</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="image__group">
+                            <img src="http://lorempixel.com/615/350" alt="ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา">
+                          </div>
+                          <div class="content__group bg-secondary">
+                            <div class="content__wrap">
+                              <h3 class="content --hilight">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา</h3>
+                              <p class="content --hilight-detail">ทีมเฮลิคอปเตอร์กู้ภัย ได้อพยพนักปีนเขาที่ได้รับ บาดเจ็บสาหัสออกจากเบสแคมป์ บนยอดเขา เอฟเวอเรสต์ หลังจากความพยายามเมื่อวันที่</p>
+                              <span class="head --more">อ่านต่อ</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="image__group">
+                            <img src="http://lorempixel.com/615/350" alt="ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา">
+                          </div>
+                          <div class="content__group bg-secondary">
+                            <div class="content__wrap">
+                              <h3 class="content --hilight">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา</h3>
+                              <p class="content --hilight-detail">ทีมเฮลิคอปเตอร์กู้ภัย ได้อพยพนักปีนเขาที่ได้รับ บาดเจ็บสาหัสออกจากเบสแคมป์ บนยอดเขา เอฟเวอเรสต์ หลังจากความพยายามเมื่อวันที่</p>
+                              <span class="head --more">อ่านต่อ</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="image__group">
+                            <img src="http://lorempixel.com/615/350" alt="ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา">
+                          </div>
+                          <div class="content__group bg-secondary">
+                            <div class="content__wrap">
+                              <h3 class="content --hilight">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา</h3>
+                              <p class="content --hilight-detail">ทีมเฮลิคอปเตอร์กู้ภัย ได้อพยพนักปีนเขาที่ได้รับ บาดเจ็บสาหัสออกจากเบสแคมป์ บนยอดเขา เอฟเวอเรสต์ หลังจากความพยายามเมื่อวันที่</p>
+                              <span class="head --more">อ่านต่อ</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="image__group">
+                            <img src="http://lorempixel.com/615/350" alt="ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา">
+                          </div>
+                          <div class="content__group bg-secondary">
+                            <div class="content__wrap">
+                              <h3 class="content --hilight">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา</h3>
+                              <p class="content --hilight-detail">ทีมเฮลิคอปเตอร์กู้ภัย ได้อพยพนักปีนเขาที่ได้รับ บาดเจ็บสาหัสออกจากเบสแคมป์ บนยอดเขา เอฟเวอเรสต์ หลังจากความพยายามเมื่อวันที่</p>
+                              <span class="head --more">อ่านต่อ</span>
+                            </div>
+                          </div>
+                        </li>
+                    </div>
+                </div>
+              </div>
+              <div class="hilight__block">
+                <div class="col-sm-6">
+                  <h3 class="head --section border-section">สถานการณ์ในประเทศ</h3>
+                  <div class="article__group">
+                    <article class="article__list --divided">
                       <figure class="article__image">
-                        <a href="/detail"><img src="images/thumbnail-default.png" alt="default thumbnail"></a>
+                        <a href=""><img src="http://lorempixel.com/100/65" alt=""></a>
                       </figure>
                       <figcaption class="article__content">
-                        <h3 class="content --head">รายการย้อนหลัง FM 90 MHz</h3>
-                        <h4 class="content --headline"><a href="/archive" class="--link-primary">รายการ ชีพจร<mark>โลก</mark></a></h4>
-                        <time class="content --date" datetime="09:30">จันทร์ - ศุกร์ 09:30 - 10:00 น.</time>
+                        <h4 class="content --headline">นายกฯ แสดงความเสียใจต่อนายกฯ เนปาล กรณีแผ่นดินไหว</h4>
+                        <p class="content --date">27 พฤศจิกายน 2558 12:09 น.</p>
                       </figcaption>
                     </article>
-                    <article class="result__wrap col-sm-6">
+                    <article class="article__list --divided">
                       <figure class="article__image">
-                        <a href="/detail"><img src="images/thumbnail-default.png" alt="default thumbnail"></a>
+                        <a href=""><img src="http://lorempixel.com/100/65" alt=""></a>
                       </figure>
                       <figcaption class="article__content">
-                        <h3 class="content --head">รายการย้อนหลัง FM 90 MHz</h3>
-                        <h4 class="content --headline"><a href="/archive" class="--link-primary">รายการ หลังคา<mark>โลก</mark></a></h4>
-                        <time class="content --date" datetime="09:30">จันทร์ - ศุกร์ 09:30 - 10:00 น.</time>
+                        <h4 class="content --headline">"น้องเมย์-รัชนก" คว้าแชมป์ แบดมินตัน เอเชีย แชมเปี้ยนชิพ 2015 หลังเอาชนะหลี่ เสี่ยว เร่ย 2-1 เกม</h4>
+                        <p class="content --date">27 พฤศจิกายน 2558 12:09 น.</p>
                       </figcaption>
                     </article>
-                  
-                    <article class="result__wrap col-sm-6">
+                    <article class="article__list --divided">
                       <figure class="article__image">
-                        <a href="/detail"><img src="images/thumbnail-default.png" alt="default thumbnail"></a>
+                        <a href=""><img src="http://lorempixel.com/100/65" alt=""></a>
                       </figure>
                       <figcaption class="article__content">
-                        <h3 class="content --head">ข่าว</h3>
-                        <h4 class="content --headline"><a href="/detail" class="--link-primary">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา<mark>โลก</mark></a></h4>
-                        <time class="content --date" datetime="2015-12-5T14:30">5 ธันวาคม 2558 14:30 น.</time>
+                        <h4 class="content --headline">ทูตไทย ณ กรุงกาฐมาณฑุ ประสานการบินไทย นำคนไทยในเนปาล กลับถึงไทย 17.00 น.วันนี้</h4>
+                        <p class="content --date">27 พฤศจิกายน 2558 12:09 น.</p>
                       </figcaption>
                     </article>
-                    <article class="result__wrap col-sm-6">
+                  </div>
+                  <div class="link__wrap gap-inner-bottom">
+                    <a class="head --more" href="#">ดูทั้งหมด</a>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <h3 class="head --section border-section">สถานการณ์ต่างประเทศ</h3>
+                  <div class="article__group">
+                    <article class="article__list --divided">
                       <figure class="article__image">
-                        <a href="/detail"><img src="images/thumbnail-default.png" alt="default thumbnail"></a>
+                        <a href=""><img src="http://lorempixel.com/100/65" alt=""></a>
                       </figure>
                       <figcaption class="article__content">
-                        <h3 class="content --head">ข่าว</h3>
-                        <h4 class="content --headline"><a href="/detail" class="--link-primary">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา<mark>โลก</mark></a></h4>
-                        <time class="content --date" datetime="2015-12-5T14:30">5 ธันวาคม 2558 14:30 น.</time>
+                        <h4 class="content --headline">นายกฯ แสดงความเสียใจต่อนายกฯ เนปาล กรณีแผ่นดินไหว</h4>
+                        <p class="content --date">27 พฤศจิกายน 2558 12:09 น.</p>
                       </figcaption>
                     </article>
-                    <article class="result__wrap col-sm-6">
+                    <article class="article__list --divided">
                       <figure class="article__image">
-                        <a href="/detail"><img src="images/thumbnail-default.png" alt="default thumbnail"></a>
+                        <a href=""><img src="http://lorempixel.com/100/65" alt=""></a>
                       </figure>
                       <figcaption class="article__content">
-                        <h3 class="content --head">ข่าว</h3>
-                        <h4 class="content --headline"><a href="/detail" class="--link-primary">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา<mark>โลก</mark></a></h4>
-                        <time class="content --date" datetime="2015-12-5T14:30">5 ธันวาคม 2558 14:30 น.</time>
+                        <h4 class="content --headline">"น้องเมย์-รัชนก" คว้าแชมป์ แบดมินตัน เอเชีย แชมเปี้ยนชิพ 2015 หลังเอาชนะหลี่ เสี่ยว เร่ย 2-1 เกม</h4>
+                        <p class="content --date">27 พฤศจิกายน 2558 12:09 น.</p>
                       </figcaption>
                     </article>
-                    <article class="result__wrap col-sm-6">
+                    <article class="article__list --divided">
                       <figure class="article__image">
-                        <a href="/detail"><img src="images/thumbnail-default.png" alt="default thumbnail"></a>
+                        <a href=""><img src="http://lorempixel.com/100/65" alt=""></a>
                       </figure>
                       <figcaption class="article__content">
-                        <h3 class="content --head">ข่าว</h3>
-                        <h4 class="content --headline"><a href="/detail" class="--link-primary">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา<mark>โลก</mark></a></h4>
-                        <time class="content --date" datetime="2015-12-5T14:30">5 ธันวาคม 2558 14:30 น.</time>
+                        <h4 class="content --headline">ทูตไทย ณ กรุงกาฐมาณฑุ ประสานการบินไทย นำคนไทยในเนปาล กลับถึงไทย 17.00 น.วันนี้</h4>
+                        <p class="content --date">27 พฤศจิกายน 2558 12:09 น.</p>
                       </figcaption>
                     </article>
-                    <article class="result__wrap col-sm-6">
-                      <figure class="article__image">
-                        <a href="/detail"><img src="images/thumbnail-default.png" alt="default thumbnail"></a>
-                      </figure>
-                      <figcaption class="article__content">
-                        <h3 class="content --head">ข่าว</h3>
-                        <h4 class="content --headline"><a href="/detail" class="--link-primary">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา<mark>โลก</mark></a></h4>
-                        <time class="content --date" datetime="2015-12-5T14:30">5 ธันวาคม 2558 14:30 น.</time>
-                      </figcaption>
-                    </article>
-                    <article class="result__wrap col-sm-6">
-                      <figure class="article__image">
-                        <a href="/detail"><img src="images/thumbnail-default.png" alt="default thumbnail"></a>
-                      </figure>
-                      <figcaption class="article__content">
-                        <h3 class="content --head">ข่าว</h3>
-                        <h4 class="content --headline"><a href="/detail" class="--link-primary">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา<mark>โลก</mark></a></h4>
-                        <time class="content --date" datetime="2015-12-5T14:30">5 ธันวาคม 2558 14:30 น.</time>
-                      </figcaption>
-                    </article>
-                    <article class="result__wrap col-sm-6">
-                      <figure class="article__image">
-                        <a href="/detail"><img src="images/thumbnail-default.png" alt="default thumbnail"></a>
-                      </figure>
-                      <figcaption class="article__content">
-                        <h3 class="content --head">ข่าว</h3>
-                        <h4 class="content --headline"><a href="/detail" class="--link-primary">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา<mark>โลก</mark></a></h4>
-                        <time class="content --date" datetime="2015-12-5T14:30">5 ธันวาคม 2558 14:30 น.</time>
-                      </figcaption>
-                    </article>
-                    <article class="result__wrap col-sm-6">
-                      <figure class="article__image">
-                        <a href="/detail"><img src="images/thumbnail-default.png" alt="default thumbnail"></a>
-                      </figure>
-                      <figcaption class="article__content">
-                        <h3 class="content --head">ข่าว</h3>
-                        <h4 class="content --headline"><a href="/detail" class="--link-primary">ทีมเฮลิคอปเตอร์กู้ภัยเริ่มภารกิจอพยพนักปีนเขา<mark>โลก</mark></a></h4>
-                        <time class="content --date" datetime="2015-12-5T14:30">5 ธันวาคม 2558 14:30 น.</time>
-                      </figcaption>
-                    </article>
-              </section>
-              <footer class="row gap-row-bottom">
-                <nav>
-                  <ul class="pagination-wrap">
-                    <!-- <li>
-                      <a href="#" aria-label="Previous">
-                        <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
-                      </a>
-                    </li> -->
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">6</a></li>
-                    <li><a href="#">7</a></li>
-                    <li><a href="#">8</a></li>
-                    <li><a href="#">9</a></li>
-                    <li>
-                      <a href="#" aria-label="Next">
-                        <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </footer>
-            </article>
+                  </div>
+                  <div class="link__wrap gap-inner-bottom">
+                    <a class="head --more" href="#">ดูทั้งหมด</a>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
-        </div><!--  end row radio module -->
+        </div>
+        <div class="row section-container">
+          <div class="col-sm-12">
+            <div class="ui tabular menu clearfix">
+              <div class="item tab-menu active" data-tab="tab-name"><span>Tab Name</span></div>
+              <div class="item tab-menu" data-tab="tab-name2"><span>Tab Name 2<span></div>
+              <div class="item tab-menu" data-tab="tab-name3"><span>Tab Name 3<span></div>
+              <div class="item tab-menu" data-tab="tab-name4"><span>Tab Name 4<span></div>
+            </div>
+            <div class="ui tab tab-content active" data-tab="tab-name">
+              <!-- Tab Content !-->
+              <h2>tab name 1</h2>
+              <div class="row">
+                <div class="col-xs-12 col-md-7">
+                  <p class="content --special"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus recusandae natus, qui facilis, laboriosam explicabo</strong> eaque blanditiis labore doloremque? Facere modi accusantium aspernatur, voluptate ab enim blanditiis sint repellendus.</p>        
+                </div>
+                <div class="col-xs-12 col-md-5">
+                  <ul class="no-list-style">
+                    <li><strong class="head --list-topic">Lorem ipsum dolor sit amet</strong><span class="head --list-detail">oluptate ab enim blanditiis sint repellendus</span></li>
+                    <li><strong class="head --list-topic">Lorem ipsum dolor sit amet</strong><span class="head --list-detail">oluptate ab enim blanditiis sint repellendus</span></li>
+                    <li><strong class="head --list-topic">Lorem ipsum dolor sit amet</strong><span class="head --list-detail">oluptate ab enim blanditiis sint repellendus</span></li>
+                    <li><strong class="head --list-topic">Lorem ipsum dolor sit amet</strong><span class="head --list-detail">oluptate ab enim blanditiis sint repellendus</span></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-md-4"><img src="" alt=""> </div>
+                  <div class="col-xs-12 col-md-8">
+                    <div class="blockquote --bg-right">
+                      <blockquote class="blockquote --bg-left">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde cupiditate iure id, pariatur accusantium repudiandae error voluptate dolorem
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui tab tab-content" data-tab="tab-name2">
+              <!-- Tab Content !-->
+              <h2>tab name 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus recusandae natus, qui facilis, laboriosam explicabo eaque blanditiis labore doloremque? Facere modi accusantium aspernatur, voluptate ab enim blanditiis sint repellendus.</p>
+            </div>
+            <div class="ui tab tab-content" data-tab="tab-name3">
+              <!-- Tab Content !-->
+              <h2>tab name 3</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus recusandae natus, qui facilis, laboriosam explicabo eaque blanditiis labore doloremque? Facere modi accusantium aspernatur, voluptate ab enim blanditiis sint repellendus.</p>
+            </div>
+            <div class="ui tab tab-content" data-tab="tab-name4">
+              <!-- Tab Content !-->
+              <h2>tab name 4</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus recusandae natus, qui facilis, laboriosam explicabo eaque blanditiis labore doloremque? Facere modi accusantium aspernatur, voluptate ab enim blanditiis sint repellendus.</p>
+            </div>
+          </div>
+        </div>
         <div class="row section-container"> 
           <div class="col-sm-6 col-md-4">
             <div class="bordered-block center-block gap-inner-bottom" style="width: 320px; height:560px;background:#ccc;">Twitter</div>
@@ -406,7 +466,7 @@
             <i class="fa fa-instagram"></i></a> -->
           <a class="social__icon" href="//www.youtube.com/channel/UCIoFfVIOrRRbI-WVdDhTTwg" target="_blank">
             <i class="fa fa-youtube-square"></i></a>
-          <span class="[ hidden-xs ] menu__text --date">วันที่ 15 สิงหาคม 2558</span>
+          <time class="[ hidden-xs ] menu__text --date" datetime="2015-8-15">วันที่ 15 สิงหาคม 2558</time>
         </li>
       </ul> <!-- primary-nav -->
     </nav> <!-- cd-nav -->
@@ -429,13 +489,15 @@
   <script src="bower_components/modernizr/modernizr.js"></script>
   <script src="bower_components/detectizr/dist/detectizr.min.js"></script>
   <script src="bower_components/lightslider/dist/js/lightslider.min.js"></script>
-  <script src="js/jquery.bxslider.min.js"></script>
+  <!--<script src="js/jquery.bxslider.min.js"></script>-->
   <script src="js/navleft.js"></script>
   <script src="js/select.js"></script>
   <script src="js/jquery.mCustomScrollbar.min.js"></script>
   <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
   <script src="js/tab.min.js"></script>
-  <script src="js/jquery.tooltipster.min.js"></script>
   <script src="js/component.js"></script>
+  <script>
+    $('.tabular .item').tab();
+  </script>
 </body>
 </html>

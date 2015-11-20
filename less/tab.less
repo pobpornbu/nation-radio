@@ -1,0 +1,104 @@
+@import (reference) "lib/lesshat";
+@import "base/mixin";
+
+@darkest-gray  : #333333;
+@yellow        : rgb(255, 210, 4);
+@white 				 : rgb(255, 255, 255);
+@transparent 				 : rgba(255, 255, 255, 0);
+@brand-primary : rgb(47, 69, 144);
+@screen-xs-max 													: 								767px;
+@screen-sm-min 													: 								768px;
+@screen-sm-max 													: 								991px;
+@screen-md-min 													: 								992px;
+
+.tab-menu {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  background-color: @white;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  position: relative;
+  span {
+  	position: relative;
+  	z-index: 2;
+  	margin-left: -20px;
+  }
+  &.active {
+  	color: @brand-primary;
+  }
+	@media screen and (min-width: @screen-sm-min) {
+  	width: 25%;
+    float: left;
+    border-bottom: none;
+		background: none;
+		&.active {
+	    .triangle-up(50px, rgb(255, 255, 255));
+	    &:before {
+		    .calc(~'width, 100% - 52px');
+		    z-index: 1;
+	    }
+	    &:after {
+	    	right: 2px;
+	    }
+	  }
+  }
+}
+
+.tab-content {
+	padding: 15px;
+	background-color: @white;
+}
+
+.head {
+	&.\--special {
+		font-size: 30px;
+		color: @darkest-gray;
+		text-transform: uppercase;
+	}
+	&.\--list-topic {
+		display: block;
+		font-size: 14px;
+		font-weight: 700;
+		color: @brand-primary;
+		text-transform: uppercase;
+	}
+	&.\--list-detail {
+		display: block;
+		font-size: 16px;
+		font-weight: 700;
+		color: @darkest-gray;
+	}
+	&.\--content {
+		text-indent: 15px;
+		font-size: 14px;
+		font-weight: 400;
+		color: @darkest-gray;
+	}
+}
+
+.blockquote {
+	border-left: none;
+	position: relative;
+	&.\--bg-right {
+		.triangle-down(20px, @brand-primary);
+		&:before {
+			width: 50%;
+			right: 0;
+			z-index: 1;
+		}
+		&:after {
+			left: 48%;
+		}
+	}	
+	&.\--bg-left {
+		.triangle-up(20px, @yellow);
+		&:before {
+			width: 30%;
+			left: 0;
+			z-index: 1;
+		}
+		&:after {
+			left: 32%;
+		}
+	}
+}

@@ -195,3 +195,59 @@
 		margin-@{dir}: @level;
 	}
 }
+
+.triangle-up(@size; @color: @brand-primary){
+  &:before {
+    content: "";
+    display: block;
+    background-color: @color;
+    width: 100%;
+    height: @size;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: (@size / 2) solid @transparent;
+    border-left: (@size / 2) solid @color;
+    border-bottom: (@size / 2) solid @color;
+    border-right: (@size / 2) solid @transparent;
+    position: absolute;
+    top: 0;
+    right: -(@size - 1);
+  }
+}
+
+.triangle-down(@size; @color: @brand-primary){
+  &:before {
+    content: "";
+    display: block;
+    background-color: @color;
+    width: 100%;
+    height: @size;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: (@size / 2) solid @transparent;
+    border-top: (@size / 2) solid @color;
+    border-right: (@size / 2) solid @color;
+    border-left: (@size / 2) solid @transparent;
+    position: absolute;
+    top: 0;
+    left: -(@size - 1);
+  }
+}
