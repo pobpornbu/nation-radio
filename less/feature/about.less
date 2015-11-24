@@ -135,3 +135,25 @@
 		}
 	}
 }
+
+.pn{
+	.article{
+		&__image{
+			float: none;
+			@media screen and (min-width: @screen-sm-min) {
+				float: left;
+			}
+		}
+		&__content{
+			@media screen and (max-width: @screen-xs-max) {
+				width: auto;
+			  float: none;
+			}
+		}
+	}
+	.head{
+		&.\--topic{
+			display: block;
+		}
+	}
+}
