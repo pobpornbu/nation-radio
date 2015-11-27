@@ -46,6 +46,9 @@
 	i {
 		color: @white;
 	}
+	&:hover {
+		background-color: @brand-primary;
+	}
 }
 .share-value {
 	position: relative;
@@ -104,14 +107,6 @@
 		background-color: @light-orange;
 		padding: 15px 0;
 	}
-	.hilight{
-		&__section{
-			padding: 0;
-			@media screen and (max-width: @screen-xs-max) {
-				margin: 15px auto;
-			}
-		}
-	}
 	.news{
 		&__item{
 			margin: 15px 0 0;
@@ -119,6 +114,16 @@
 			.article__content .content.\--headline {
 				max-height: 47px;
 				margin: 0 0 5px 0;
+			}
+		}
+	}
+}
+.news, .host {
+	.hilight{
+		&__section{
+			padding: 0;
+			@media screen and (max-width: @screen-xs-max) {
+				margin: 15px auto;
 			}
 		}
 	}
@@ -135,6 +140,7 @@
 		}
 	}
 }
+
 .pn-ctn {
 	&:extend(.ct-ctn);
 	.section-max-xs;
@@ -161,5 +167,28 @@
 		&.\--topic{
 			display: block;
 		}
+	}
+}
+
+
+#nation-nav-theme {
+	.host {
+		.component(social{
+			.part(icon{
+				color: @gray-dark;
+		    padding: 0;
+		    margin: 10px 5px 0 0;	
+		    .option(f{
+		    	&:hover {
+		    		color: rgb(59,87,157);
+		    	}
+		    });	
+		    .option(t{
+		    	&:hover {
+		    		color: rgb(51,204,255);
+		    	}
+		    });	
+    	});
+		});
 	}
 }
