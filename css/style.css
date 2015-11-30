@@ -50,9 +50,20 @@
 .gap-sm-bottom {
   margin-bottom: 5px;
 }
+.gsmb {
+  margin-bottom: 15px;
+}
 .ngv {
   margin-top: 0;
   margin-bottom: 0;
+}
+.wh-a {
+  margin-top: 0;
+  line-height: 1;
+}
+.wh-l {
+  margin: 0;
+  line-height: 1;
 }
 .rel {
   position: relative;
@@ -1948,7 +1959,7 @@ width:calc(100% - 310px);
   }
   .hilight__section .content__group .content.\--hilight-detail {
     margin: 0 0 10px;
-    height: 59px;
+    height: 40px;
     overflow: hidden;
   }
 }
@@ -2506,4 +2517,7 @@ width:calc(100% - 80px);
 }
 #nation-nav-theme .host .social__icon.\--t:hover {
   color: #33ccff;
+}
+.activity .content__group {
+  height: 190px;
 }
