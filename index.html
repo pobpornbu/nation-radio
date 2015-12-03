@@ -15,7 +15,6 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- <link rel="icon" type="image/png" href="images/favicon.png" /> -->
@@ -29,7 +28,6 @@
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="bower_components/lightslider/dist/css/lightslider.min.css">
   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-  <link rel="stylesheet" href="css/jquery.bxslider.min.css">
   <link rel="stylesheet" href="css/tab.min.css">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -112,24 +110,12 @@
     <main class="cd-main-content main__container">
       <!-- your content here -->
       <div class="layout__container">
-        <div class="row hidden-xs">
-          <div class="breaking-news">
+        <div class="row breaking-news">
+          <div class="breaking-news__section">
             <a href="http://breakingnews.nationtv.tv/" target="_blank"><div class="breaking-news__header">Breaking News <i class="fa fa-play breaking-news__icon"></i></div></a>
             <div class="breaking-news__scroller">
-              <ul class="breaking-news__list js-breaking-news-scroll">
-              <?php
-              $url_request = 'http://breakingnews.nationtv.tv/rss/breakhot.xml';
-              $data_bk_hot = simplexml_load_string(file_get_contents($url_request));
-              for($i=0;$i<7;$i++){
-                $title_bk_hot = preg_replace("/\\s+/iu","",trim(substr($data_bk_hot->channel->item[$i]->title , 10 )));
-                $time_bk_hot = substr($data_bk_hot->channel->item[$i]->title , 0 , 10 );
-                //$datetime_bk_hot = substr($data_bk_hot->channel->item[$i]->pubDate , 0, 26 );
-                $link_bk_hot = $data_bk_hot->channel->item[$i]->link;
-                if($link_bk_hot){
-                  echo '<li class="breaking-news__items"><a href="'.$link_bk_hot.'" target="_blank">'.$time_bk_hot.' '.$title_bk_hot.'</a></li>';
-                }
-              }
-              ?>
+              <ul class="breaking-news__list js-breaking-news-scroll newsticker">
+                <li class="breaking-news__items"><a href="http://breakingnews.nationtv.tv/home/read.php?newsid=774342" target="_blank">10:55 น. “บิ๊กตู่”เชิญคนมีศักยภาพสมัครทำงานกรมการบินพลเรือน</a></li><li class="breaking-news__items"><a href="http://breakingnews.nationtv.tv/home/read.php?newsid=774341" target="_blank">10:46 น. "ประยุทธ์”ลั่นโครงการรถไฟไทย-จีนยังไม่ล้ม</a></li><li class="breaking-news__items"><a href="http://breakingnews.nationtv.tv/home/read.php?newsid=774339" target="_blank">10:15 น. “นายกฯ”นำครม.-ขรก.ทั่วประเทศถวายสัตย์ปฏิญาณ</a></li><li class="breaking-news__items"><a href="http://breakingnews.nationtv.tv/home/read.php?newsid=774326" target="_blank">09:38 น. ราคาทอง3ธ.ค.ลง200บ.รูปพรรณขายบาทละ18,350</a></li><li class="breaking-news__items"><a href="http://breakingnews.nationtv.tv/home/read.php?newsid=774317" target="_blank">08:44 น. โรคอุจจาระร่วงจากเชื้อไวรัสโรต้าระบาดเพชรบูรณ์</a></li><li class="breaking-news__items"><a href="http://breakingnews.nationtv.tv/home/read.php?newsid=774316" target="_blank">07:43 น. น้ำมันดิบร่วงลง1.91ดอลลาร์ปิด39.94ดอลลาร์/บาร์เรล</a></li><li class="breaking-news__items"><a href="http://breakingnews.nationtv.tv/home/read.php?newsid=774315" target="_blank">06:40 น. ไทยตอนบนฝนฟ้าคะนองลมกระโชกแรงมีลูกเห็บบางแห่ง</a></li>   
               </ul>
               <button type="button" class="breaking-news__close js-breaking-news-close">X</button>
             </div>
@@ -611,11 +597,7 @@
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <script src=""></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <!--<script src="bower_components/angular/angular.min.js"></script>
-  <script src="bower_components/autosize/dest/autosize.min.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.min.js"></script>-->
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/modernizr/modernizr.js"></script>
   <script src="bower_components/detectizr/dist/detectizr.min.js"></script>
@@ -624,6 +606,7 @@
   <script src="js/jquery.select.js"></script>
   <script src="js/jquery.mCustomScrollbar.min.js"></script>
   <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
+  <script src="js/jquery.webticker.min.js"></script>
   <script src="js/tab.min.js"></script>
   <script src="js/component.js"></script>
 </body>
