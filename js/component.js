@@ -10,6 +10,17 @@
     $("#previous-clip").mCustomScrollbar({
       theme:"minimal"
     });
+
+    var active = $('#previous-clip').find('.active');
+    $("#previous-clip").mCustomScrollbar("scrollTo", active, {
+      scrollInertia:3000
+    });    
+
+    $(".js-scroll").mCustomScrollbar({
+      theme:"minimal-dark",
+      setHeight: 464,
+      scrollbarPosition: "outside"
+    });
   });
 
   $(document).ready(function(){
