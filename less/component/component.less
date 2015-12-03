@@ -4,6 +4,10 @@ input, textarea, button, select {
     outline: none;
   }
 }
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
 // Form
 // ---------------------------------------
 
@@ -33,10 +37,6 @@ input, textarea, button, select {
 
 // Search
 // ---------------------------------------
-// <div class="form-group input__wrap --icon">
-//   <input type="search" name="search" class="input__search input --primary" placeholder="Search" results="5" autosave="some_unique_value">
-//   <i class="fa fa-search input__icon --search"></i>
-// </div>
       
 input[type=search] {
   .appearance(textfield);
@@ -52,25 +52,6 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-.component(input {
-  .part(search {
-    width: 100px;
-    .round;
-    .transition(all .5s);
-
-    &:focus {
-      width: 150px;
-    }
-  });
-  .part(icon {
-    .option(search {
-      font-size: 16px;
-      color: @grey;
-      .input-text-height();
-      line-height: @height;
-    });
-  });
-});
 
 // Input
 // ---------------------------------------
@@ -111,11 +92,6 @@ input[type="search"]::-webkit-search-results-decoration {
   display: inline-block;
   position: relative;
   .box-shadow(none);
-  .part(wrap{
-    .option(icon{
-      position: relative;
-    });
-  });
   .part(text{
     .input-text-height();
     height: @height;
@@ -124,17 +100,6 @@ input[type="search"]::-webkit-search-results-decoration {
   .part(textarea {
     height: 80px;
     width: 100%;
-  });
-  .part(icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    display: block;
-    .input-text-height();
-    width: @height;
-    height: @height;
-    text-align: center;
   });
 
   .option(primary{
@@ -145,175 +110,59 @@ input[type="search"]::-webkit-search-results-decoration {
   });
 });
 
-
-// Textarea
-// ---------------------------------------
-
-.no-textarea-style {
-  .input-style(@input-primary-bg-theme, @input-primary-color-theme, rgba(255,255,255,0));
-  box-shadow: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none; 
-  overflow: auto; // prevent scrollbar in IE
-}
-
-
-// Radio
-// ------------------------------------------------------
-// <fieldset class="form-group">
-//   <input id="female" name="gender" type="radio">
-//   <label class="input__radio"  for="female"> Female </label>
-//   <input id="male" name="gender" type="radio" >
-//   <label class="input__radio" for="male"> Male </label>
-// </fieldset>
-
-input[type=radio],input[type=checkbox]{
-  display: none;
-}
-.input__radio, .input__checkbox {
-  display: inline-block;
-  cursor: pointer;
-}
-.input__radio:before, .input__checkbox:before {
-  font-size: 20px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  vertical-align:middle;
-  text-align: center;
-  border-radius: 10px;
-}
-.input__radio:before {
-  .icon-iconicon("\f3a6");
-}
-input[type=radio]:checked + .input__radio:before {
-  .icon-iconicon("\f3a7");
-}
-
-// Checkbox
-// ------------------------------------------------------
-// <fieldset class="form-group">
-//   <input type="checkbox" id="subscribe" name="subscribe">
-//   <label class="input__checkbox --primary" for="subscribe">I agree to the Term of Use and Privacy Policy</label>
-// </fieldset>
-
-.input__checkbox:before {
-  .icon-iconicon("\f372");
-}
-
-input[type=checkbox]:checked + .input__checkbox:before {
-  .icon-iconicon("\f374");
-}
-
-// Theme color for radio and checkbox
-// ------------------------------------------------------
-.input--primary {
-  .input-radio-checkbox-color(@input-radio-color-theme, before);
-}
-input[type=radio]:checked + .input--primary:before,
-input[type=checkbox]:checked + .input--primary:before {
-  color: @brand-primary;
-}
-
 // Breakingnews
 @set-height-box-breakingnews            :                 30px;   
 @color-breaking-news                    :                 rgb(246, 179, 0);
 @box-size-logo                          :                 120px;
+@size-gradient                          :                 20px;
 
-  .breaking-news{
-    @size-gradient : 20px;
-    margin: 15px 0;
-    .font-kanda(@font-size: 13px; @font-weight: normal; @letter-spacing: 0.05em);
-    .transition(transform 0.5s linear);
+.tickercontainer {
+  width: 100%;
+  max-width: 1000px;
+}
+
+  .component(breaking-news {
     position: relative;
-    &:before{
-      background-color: @white;
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0; 
-      width:100%;
-      height: @set-height-box-breakingnews;
-      z-index: -1;
+    height: 30px;
+    margin-top: 0;
+    .transition(margin-top .5s);
+    @media screen and (min-width: @screen-sm-min){
+      height: 60px;
     }
-    + .cd-main-header, 
-    + .cd-main-header + .cd-search + .cd-main-content + .cd-nav > .cd-primary-nav { // Peet 14/9/58 add cd-search
-      top: @set-height-box-breakingnews;//koko 23/09/15
-    }
-    + .cd-main-header + .cd-search + .cd-main-content + .cd-nav + .cd-overlay{
-      top: 60px + @set-height-box-breakingnews; //koko 23/09/15
-    }
-    + .cd-main-header{//koko 23/09/15
-      @media screen{
-        @media (max-width: @screen-xs-max){
-          + .cd-search {
-            top: 60px + @set-height-box-breakingnews; // Peet 25/8/58
-            + .cd-main-content{
-              padding-top: 60px + @set-height-box-breakingnews;  
 
-              + .cd-nav > .cd-primary-nav {
-                .cd-secondary-nav, .cd-tertiary-nav {
-                  .ie & {
-                    top: 30px;
-                  }
-                }
-              }
-            }
-          }
-        }
-        @media (min-width: @screen-sm-min){
-          + .cd-search {
-            top: 60px + @set-height-box-breakingnews; // Peet 14/9/58
-            
-            + .cd-main-content{
-              padding-top: 120px + @set-height-box-breakingnews;
-            }
-
-          }
-        } 
-      }
-    }
     //When close breaking-news
-    &.\--close{
-      // .translateY(-30px);
-      top: -30px; 
-      + .cd-main-header, 
-      + .cd-main-header + .cd-search + .cd-main-content + .cd-nav > .cd-primary-nav{ //koko 23/09/15
-        top: 0;
+    .option(close{
+      margin-top: -30px; 
+      @media screen and (min-width: @screen-sm-min){
+        margin-top: -45px; 
       }
-      + .cd-main-header + .cd-search{ //koko 23/09/15
-        @media screen{
-          @media (max-width: @screen-xs-max){//max 767
-            + .cd-main-content{ //koko 23/09/15
-                padding-top: 60px;    
-              + .cd-nav + .cd-overlay{
-                top: 0;
-                + .cd-search{
-                  top: 72px; // Peet 25/8/58
-                }
-              }
-            }
-          }         
-          @media (min-width: @screen-sm-min){//min 768
-            + .cd-main-content{  //koko 23/09/15
-              padding-top: 132px; // Peet 25/8/58
-              .transition(padding-top 0.3s linear);
-            }
-          } 
-        }
-      }     
-    }
+    });
+
+    .part(section{
+      .font-kanda(@font-size: 13px; @font-weight: normal; @letter-spacing: 0.05em);
+      .transition(transform 0.5s linear);
+      position: absolute;
+      width: 100%;
+      &:before{
+        background-color: @white;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; 
+        width:100%;
+        height: @set-height-box-breakingnews;
+        z-index: -1;
+      }
+      @media screen and (min-width: @screen-sm-min){
+        margin: 15px 0;
+      }
+    });
     //Element
-    &__header, &__scroller{
+    .part(header {
       height: @set-height-box-breakingnews;     
-    }
-    &__header{
+    });
+    .part(header{
       color: @white;
       background-color: @color-breaking-news;
       width: @box-size-logo;
@@ -323,14 +172,15 @@ input[type=checkbox]:checked + .input--primary:before {
       top: 0;
       left: 0;
       z-index: @zindex-breakingnews-head;
-    }
-    &__icon{
+    });
+    .part(icon{
       font-size: 10px;
       line-height: 1.9;
       vertical-align: middle;      
-    }
-    &__scroller{
+    });
+    .part(scroller{
       width: 100%;
+      height: @set-height-box-breakingnews;     
       overflow: hidden;
       border: 1px solid @ultra-light-blue-3;
       position: relative;
@@ -351,8 +201,8 @@ input[type=checkbox]:checked + .input--primary:before {
         right: @set-height-box-breakingnews;    
         .background-image(linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%));
       }
-    }
-    &__close{
+    });
+    .part(close{
       background-color: @white;
       color: @gray-light;
       font-size: 17px;      
@@ -371,8 +221,8 @@ input[type=checkbox]:checked + .input--primary:before {
         color: @white;
         background-color: @color-border-primary; 
       }
-    }  
-    &__list{
+    });
+    .part(list{
       margin: 0;
       padding: 6px 0;       
       height: @set-height-box-breakingnews;
@@ -388,13 +238,16 @@ input[type=checkbox]:checked + .input--primary:before {
         display: inline-block;
         height: auto!important; //strick height for style inline
       }
-    }
-    &__items{
+    });
+    .part(items{
       @adjust-divided : 8px;
       display: none; //Hide first 
       padding-right: @adjust-divided;
       margin: 0 @adjust-divided 0 0;
       font-weight: 700;
+      .newsticker & {
+        display: inline-block;
+      }
       &:last-child{
         a{
           &:after{
@@ -417,9 +270,8 @@ input[type=checkbox]:checked + .input--primary:before {
           right: -13px;
         }
       }     
-    }
-  }
-
+    });
+  });
 
 // Tab
 .tab-head__wrap {

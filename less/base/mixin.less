@@ -251,3 +251,29 @@
     left: -(@size - 1);
   }
 }
+
+.fill-col(@n, @i: 1) when (@i =< @n) {
+  &.program-out {
+	  &.day@{i} {	
+	    .col {
+				&.\--day@{i} {
+					b {
+						background-color: @gray-light;
+					}
+				}
+	    }
+		}
+  }
+	&.program-in {
+	  &.day@{i} {	
+	    .col {
+				&.\--day@{i} {
+					b {
+						background-color: @brand-primary;
+					}
+				}
+	    }
+		}
+  }
+  .fill-col(@n, (@i + 1));
+}

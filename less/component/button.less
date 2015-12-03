@@ -10,17 +10,7 @@
 .button-size-icon {
   padding: 6px 20px 6px 40px;
 }
-.or-sh {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin-left: 5px;
-  padding: 4px 7px;
-  text-align: center;
-  position: relative;
-  top: -3px;
-  cursor: pointer;
-}
+
 .component(button {
   .button-typo;
   .button-size-normal;
@@ -29,13 +19,11 @@
     outline: none;
     -webkit-appearance: none;
   }
+
   .option(solid-primary{
     .input-style(@button-solid-primary-theme; @white; @button-solid-primary-theme);
   });
-  .option(outline-primary {
-    .input-style(@button-outline-primary-bg-theme; @button-outline-primary-color-theme; @button-outline-primary-border-theme);
-  });
-
+  
   .option(icon {
     padding: 6px 20px 6px 40px;
     position: relative;
@@ -47,35 +35,30 @@
   .option(expand{
     width: 100%;
   });
-  // .option(facebook {
-  //   color: @white;
-  //   .input-bg(@button-facebook-bg-color-theme);
-  //   &:before {
-  //     font-size: 26px;
-  //     top: 2px;
-  //     left: 50%;
-  //     margin-left: -70px;
-  //   }
-  // });
+
   .option(play {
+    display: block;
+    width: 100%;
     max-width: 490px; 
     padding: 12px 20px 12px 40px;
-    .button-outline(@button-radio-bg-theme; @button-radio-color-theme; @white; 2px);
-    // color: @blue-purple;
-    // background: @white;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: @gap-row;
+    .button-outline(@button-radio-bg-theme; @button-radio-color-theme; rgba(255, 255, 255, 0.5); 2px);
     .font-kanda(17px, 700);
-    &.js-play {
+    &.is-play {
       &:before {
         .icon-fontawesome("\f04c");
       }
     }
     &:before{
       .icon-fontawesome("\f144");
-      // color: @blue-purple;
       font-size: 20px;
       top: 15px;
       left: 20px;
+    }
+    &:hover, &:active, &:focus {
+      text-decoration: none;
     }
   });
     // Share button
@@ -97,19 +80,3 @@
   });
 
 });
-
-.dt-btn {
-  &:extend(.or-sh);
-  border: 1px solid @gray-medium;
-  .border-radius(3px);
-  background: none;
-  &:hover, &:focus, &:active {
-    background-color: @gray-medium;
-    i {
-      color: @white;
-    }
-  }
-  i {
-    color: @gray-medium;
-  }
-}

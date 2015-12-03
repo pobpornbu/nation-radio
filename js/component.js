@@ -1,218 +1,140 @@
 (function($) {
 
-	// Textarea
-	// autosize($('textarea'));
-	// $('.js-comment-textarea').on('focus', function() {
-	// 	$(this).parent().toggleClass('active');
-	// });
-
+  $(window).scroll(function() {
+    if(Modernizr.mq('(min-width: 768px)')) {
+      if ($(document).scrollTop() > 120) {
+        $('#nation-nav-theme').addClass('shrink');
+      } else {
+        $('#nation-nav-theme').removeClass('shrink');
+      }
+    }else{
+      if ($(document).scrollTop() > 0) {
+        $('#nation-nav-theme').addClass('shrink');
+      } else {
+        $('#nation-nav-theme').removeClass('shrink');
+      }
+    }
+  });
+  
   $(window).load(function(){   
     $("#previous-clip").mCustomScrollbar({
       theme:"minimal"
     });
+
+    var active = $('#previous-clip').find('.active');
+    $("#previous-clip").mCustomScrollbar("scrollTo", active, {
+      scrollInertia:3000
+    });    
+
+    $(".js-scroll").mCustomScrollbar({
+      theme:"minimal-dark",
+      setHeight: 464,
+      scrollbarPosition: "outside"
+    });
   });
 
   $(document).ready(function(){
+
     $(".js-lastestnews").lightSlider({
       item: 1,
       controls: false
     });
-    
-    // var slider = $(".js-lastest-activity").lightSlider();
-    // var slider = $(".js-lastest-activity").lightSlider({
-    //   gallery:true,
-    //   item:1,
-    //   vertical:true,
-    //   verticalHeight: 300,
-    //   thumbItem:4,
-    //   vThumbWidth: 100,
-    //   slideMargin:0,
-    //   adaptiveHeight:true,
-    //   responsive: [
-    //     {
-    //       breakpoint: 768,
-    //       settings: {
-    //         vertical: false,
-    //         verticalHeight: 0,
-    //         item:1
-    //       }
-    //     },     
-    //     {
-    //       breakpoint: 320,
-    //       settings: {
-    //         gallery: false,
-    //         item:1
-    //       }
-    //     }      
-    //   ]
-    //   // gallery: true,
-    //   // item: 1,
-    //   // thumbItem: 5
-    // });
 
-    // var  
-    // settings = {
-    //   gallery:true,
-    //   item:1,
-    //   vertical:true,
-    //   verticalHeight: 300,
-    //   thumbItem:4,
-    //   vThumbWidth: 100,
-    //   slideMargin:0,
-    //   adaptiveHeight:true
-    // },
-    // slider = $(".js-lastest-activity").lightSlider();
-    // function lightslider(){
+    $(".js-activity-detail").lightSlider({
+      item: 1,
+      gallery: true,
+      thumbItem: 4,
+      vThumbWidth: 100,
+      slideMargin:0,
+      adaptiveHeight:true,
+      pager: false
+    });    
 
-      if(Modernizr.mq('(min-width: 992px)')){
-        console.log('width 992');
-        $(".js-lastest-activity").lightSlider({
-          gallery:true,
-          item:1,
-          vertical:true,
-          verticalHeight: 300,
-          thumbItem:4,
-          vThumbWidth: 100,
-          slideMargin:0,
-          adaptiveHeight:true,
-          controls: false
-        });    
-      }else if(Modernizr.mq('(min-width: 768px)')){
-        console.log('width 768');
-        // slider.refresh();
-        $(".js-lastest-activity").lightSlider({
-          gallery:true,
-          item:1,
-          thumbItem:5,
-          vThumbWidth: 100,
-          slideMargin:0,
-          adaptiveHeight:true
-        });    
-      }else if(Modernizr.mq('(min-width: 320px)')){
-        console.log('width 320');
-        $(".js-lastest-activity").lightSlider({
-          gallery: false,
-          item:1,
-          thumbItem:4,
-          vThumbWidth: 100,
-          slideMargin:0,
-          adaptiveHeight:true,
-          pager: false
-        });
-      }
-    //   slider.refresh();
-    // }
-
-    // $(window).on("orientationchange load resize", function () {
-    //   lightslider();
-    // });
-    // var  
-    // settings = {
-    //   gallery:true,
-    //   item:1,
-    //   vertical:true,
-    //   verticalHeight: 300,
-    //   thumbItem:4,
-    //   vThumbWidth: 100,
-    //   slideMargin:0,
-    //   adaptiveHeight:true,
-    //   responsive: [
-    //     {
-    //       breakpoint: 768,
-    //       settings: {
-    //         vertical: false,
-    //         verticalHeight: 0,
-    //         item:1
-    //       }
-    //     },     
-    //     {
-    //       breakpoint: 320,
-    //       settings: {
-    //         gallery: false,
-    //         item:1
-    //       }
-    //     }      
-    //   ]
-    // },
-    // slider = $(".js-lastest-activity").lightSlider(settings);
-
-
-    // $(window).on("orientationchange load resize", function () {
-    //   var w = $(document).width();
-    //   setTimeout(function(){
-    //     if(w >= 992 ){}
-    //     slider.refresh();
-    //   }, 100)
-    // }).trigger("resize");      
-
-    // var smSettings = {
-    //     minSlides : 4,
-    //     maxSlides   : 4,
-    //     moveSlides : 1,
-    //     responsive : true,
-    //     captions : true,
-    //     pagerCustom: '#bx-pager'
-    // },
-    // lgSettings = {
-    //     minSlides : 4,
-    //     maxSlides   : 4,
-    //     moveSlides : 1,
-    //     responsive : true,
-    //     captions : true,
-    //     pagerCustom: '#bx-pager'
-    // },
-    // $('.js-lastest-activity').bxSlider( {
-    //     minSlides : 4,
-    //     maxSlides   : 4,
-    //     moveSlides : 1,
-    //     responsive : true,
-    //     captions : true,
-    //     pagerCustom: '#bx-pager'
-    // } );
-    // $(window).resize( function() {
-    //     var w = $(window).innerWidth();
-    //     setTimeout(function(){
-    //         slider.destroySlider();
-    //         slider.reloadSlider();
-    //         // if(w >= 768) {
-    //         //   slider.destroySlider();
-    //         //   slider.reloadSlider( lgSettings );              
-    //         // }
-    //     }, 100)
-    // }).trigger("resize");
-    $('.js-tab-btn').tab();
-  });
-
-  $(window).scroll(function() {
-    if ($(document).scrollTop() > 658) {
-      $('#nation-nav-theme').addClass('shrink');
-    } else {
-      $('#nation-nav-theme').removeClass('shrink');
+    if(Modernizr.mq('(min-width: 992px)')){
+      $(".js-lastest-activity").lightSlider({
+        gallery:true,
+        item:1,
+        vertical:true,
+        verticalHeight: 300,
+        thumbItem:4,
+        vThumbWidth: 100,
+        slideMargin:0,
+        adaptiveHeight:true,
+        controls: false
+      });    
+    }else if(Modernizr.mq('(min-width: 768px)')){
+      // slider.refresh();
+      $(".js-lastest-activity").lightSlider({
+        gallery:true,
+        item:1,
+        thumbItem:5,
+        vThumbWidth: 100,
+        slideMargin:0,
+        adaptiveHeight:true
+      });    
+    }else if(Modernizr.mq('(min-width: 320px)')){
+      $(".js-lastest-activity").lightSlider({
+        gallery: false,
+        item:1,
+        thumbItem:4,
+        vThumbWidth: 100,
+        slideMargin:0,
+        adaptiveHeight:true,
+        pager: false
+      });
     }
+
+    $('.js-tab-btn').tab();
+    
+    // Tooltips
+    $(".js-share-btn").each(function(){
+      // if(!$(this).data('tooltipsterNs')){
+        $(this).tooltipster({
+          interactive: true,
+          position: 'bottom',
+          trigger: 'click',
+          theme: 'tooltipster-shadow',
+          content: $(this).parents('.js-share').find('.js-share-dialog'),
+          // functionInit: function($button,$dialog){
+          //  //bind social share button
+          //  Apps.social.bindShareButton($dialog,$button);
+          // },
+          functionReady: function(){
+            $(this).addClass('active');
+          },
+          functionAfter: function(){
+            $(this).removeClass('active');
+          },
+          minWidth: 0
+        }).click(function(e){e.preventDefault();});
+      // }
+    });
+
+    $('.js-sch-swift').on('click', function(){
+      $('.weekend').toggleClass('is-shown');
+    });
+
+    $('.js-btn-radio').on('click', function(){
+      $('.js-btn-radio').removeClass('is-play');
+      $(this).toggleClass('is-play');
+    });
+
+    $('#web').select({
+      list: 'ext-link'
+    })
+
+    //marquee Breakingnewsß
+    $(".js-breaking-news-scroll").webTicker({
+      speed: 30, 
+      moving: true,
+      startEmpty:true, 
+      hoverpause:true
+    }); 
+
+    $(".js-breaking-news-close").on("click", function(){
+      $(".breaking-news").addClass("--close");
+    });
+
   });
-  
-  // Tooltips
-  $(".js-share-btn").each(function(){
-    // if(!$(this).data('tooltipsterNs')){
-      $(this).tooltipster({
-        interactive: true,
-        position: 'bottom',
-        trigger: 'click',
-        theme: 'tooltipster-shadow',
-        content: $(this).parents('.js-share').find('.js-share-dialog'),
-        // functionInit: function($button,$dialog){
-        //  //bind social share button
-        //  Apps.social.bindShareButton($dialog,$button);
-        // },
-        functionReady: function(){
-          $(this).addClass('active');
-        },
-        functionAfter: function(){
-          $(this).removeClass('active');
-        },
-        minWidth: 0
-      }).click(function(e){e.preventDefault();});
-    // }
-  });
-  
+
 })(jQuery);
