@@ -106,6 +106,10 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
+.giv {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 .gap-inner-top,
 .git {
   margin-top: 10px;
@@ -576,6 +580,7 @@ lesshat-selector {
 @media screen and (min-width: 768px) {
   .section-max-xs {
     max-width: none;
+    margin-left: 15px;
   }
 }
 .main__container {
@@ -2200,6 +2205,8 @@ width:calc(100% - 80px);
 }
 .share-icon {
   background-color: #a5a5a5;
+  padding: 5px 8px;
+  margin-left: 5px;
 }
 .share-icon i {
   color: #ffffff;
@@ -2320,6 +2327,7 @@ width:calc(100% - 80px);
 @media screen and (min-width: 768px) {
   .pn-ctn {
     max-width: none;
+    margin-left: 15px;
   }
 }
 .pn .article__image {
@@ -2352,6 +2360,10 @@ width:calc(100% - 80px);
 }
 .activity .content__group {
   height: 190px;
+}
+.activity .content__group .wh-a {
+  height: 55px;
+  overflow: hidden;
 }
 .col {
   display: block;

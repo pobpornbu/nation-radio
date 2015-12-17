@@ -1,0 +1,13 @@
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="bower_components/detectizr/dist/detectizr.min.js"></script>
+  <script src="bower_components/lightslider/dist/js/lightslider.min.js"></script>
+  <script src="js/navleft.js"></script>
+  <script src="js/jquery.select.js"></script>
+  <script src="js/jquery.mCustomScrollbar.min.js"></script>
+  <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
+  <script src="js/jquery.webticker.min.js"></script>
+  <script src="js/jquery.tooltipster.min.js"></script>
+  <script src="js/tab.min.js"></script>
+  <script src="js/component.js"></script>
