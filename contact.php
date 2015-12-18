@@ -49,7 +49,7 @@
                           </div>
                       </div>
                         <h3 class="head --topic">แบบสำรวจความคิดเห็น</h3>
-                        <form>
+                <form id="contactForm">
                   <fieldset class="form-group">
                     <div class="label-wrap">
                       <label for="name" class="head --static">ชื่อ</label>
@@ -88,10 +88,10 @@
                   </fieldset>
                   <fieldset class="form-group">
                     <div class="label-wrap">
-                      <label for="comment" class="head --static">แสดงความคิดเห็น</label>
+                      <label for="message" class="head --static">แสดงความคิดเห็น</label>
                     </div>
                     <div class="input-wrap">
-                      <textarea name="comment" id="comment" class="input input__textarea --primary"></textarea>
+                      <textarea name="message" id="message" class="input input__textarea --primary"></textarea>
                     </div>
                   </fieldset>
                   <fieldset class="form-group">

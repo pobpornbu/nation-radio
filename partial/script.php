@@ -9,5 +9,6 @@
   <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
   <script src="js/jquery.webticker.min.js"></script>
   <script src="js/jquery.tooltipster.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/tab.min.js"></script>
   <script src="js/component.js"></script>

@@ -11,6 +11,7 @@
   background-color: #ffffff;
   padding: 5px 0;
 }
+.error,
 .sch__coltime,
 .sch__title {
   font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
@@ -580,7 +581,6 @@ lesshat-selector {
 @media screen and (min-width: 768px) {
   .section-max-xs {
     max-width: none;
-    margin-left: 15px;
   }
 }
 .main__container {
@@ -880,6 +880,9 @@ mark {
   color: #a5a5a5;
   font-size: 20px;
   margin-right: 5px;
+}
+.error {
+  color: #b30000;
 }
 input,
 textarea,
@@ -2327,6 +2330,10 @@ width:calc(100% - 80px);
 @media screen and (min-width: 768px) {
   .pn-ctn {
     max-width: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pn-ctn {
     margin-left: 15px;
   }
 }

@@ -1,6 +1,6 @@
 <header class="cd-main-header layout__container">
   <h1 class="cd-logo">
-    <a class="logo__container --topbar" href="index.html"></a>
+    <a class="logo__container --topbar" href="index.php"></a>
   </h1>
 
   <ul class="cd-header-buttons">

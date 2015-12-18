@@ -125,6 +125,19 @@
     $('#subject').select({
       list: 'text'
     });
+
+    // validate
+    $("#contactForm").validate({
+      rules: {
+        name: "required",
+        message: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      }
+    });
+    
     //marquee Breakingnewsß
     $(".js-breaking-news-scroll").webTicker({
       speed: 30,
