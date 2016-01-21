@@ -25,12 +25,12 @@
               <main class="radioplayer__wrap clearfix">
                 <div>
                   <p class="radio__text"><time datetime="2015-06-10 8:00-9:30">08:00 - 09:30</time> เก็บตกจากเนชั่น</p>
-                  <button class="button --icon --play --expand center-block js-btn-radio">FM 90.5 <span class="hidden-sm">MHz</span></button>
+                  <button class="button --icon --play --expand center-block js-btn-radio" onclick='playerInstance.play()'>FM 90.5 <span class="hidden-sm">MHz</span></button>
                   <!-- <button class="button --icon --play --expand fa-play-circle js-play" onclick="play()">FM 90.5 <span class="hidden-sm">MHz</span></button> -->
                 </div>
                 <div>
                   <p class="radio__text">------------------------</p>
-                  <button class="button --icon --play --expand center-block js-btn-radio">FM 102 <span class="hidden-sm">MHz</span></button>
+                  <button class="button --icon --play --expand center-block js-btn-radio" onclick='playerInstance.play()'>FM 102 <span class="hidden-sm">MHz</span></button>
                 </div>
                 <div id="audio"></div>
               </main>
@@ -85,6 +85,24 @@
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <?php include("partial/script.php"); ?>
-
+  <script src="js/jwplayer.js"></script>
+  <script>jwplayer.key="jbEHbnlav/i4i6g2u/FK9vaDatg1khGFGUvywQ==";</script>  
+  <script type="text/javascript">
+    var playerInstance = jwplayer("audio");
+    jwplayer("audio").setup({
+        playlist: [{
+          file: 'http://content.jwplatform.com/videos/bkaovAYt-I3ZmuSFT.m4a',
+        },{
+          file: 'http://content.jwplatform.com/videos/3XnJSIm4-I3ZmuSFT.m4a'
+        },{
+          file: 'http://content.jwplatform.com/videos/i8oQD9zd-I3ZmuSFT.m4a'
+        }],
+        width: "300px",
+        height: "32px",
+        skin: {
+          name: "primary"
+        }
+    });
+  </script>
 </body>
 </html>

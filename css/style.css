@@ -2115,11 +2115,6 @@ width:calc(100% - 80px);
     letter-spacing: 2px;
   }
 }
-.live #audio_controlbar .jwbackground,
-.live #audio_controlbar .jwcapLeft {
-  background: none;
-  display: none;
-}
 .live #audio {
   position: absolute;
   margin: 0 auto;
@@ -2133,17 +2128,58 @@ width:calc(100% - 80px);
   width: 100%;
   margin-top: 15px;
 }
-.live #audio .jwvolumeH {
-  width: 259px;
+.live #audio .jw-group:focus {
+  outline: none;
 }
-.live #audio .jwprogressOverflow {
-  overflow: visible;
-  opacity: 1 !important;
+.live #audio .jw-controlbar-left-group,
+.live #audio .jw-controlbar-center-group {
+  display: none;
 }
-@media screen and (min-width: 768px) {
-  .live #audio .jwvolumeH {
-    width: 269px;
-  }
+.live #audio .jw-controlbar-right-group:after {
+  content: "\f028";
+  display: inline-block;
+  font-family: "FontAwesome", Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+}
+.live #audio .jw-background-color {
+  background: none;
+}
+.live #audio .jw-buffer {
+  background: #ebebeb;
+}
+.live #audio .jw-progress,
+.live #audio .jw-knob {
+  background: #f7b018;
+}
+.live #audio .jw-slider-horizontal .jw-slider-container {
+  width: 230px;
+}
+.live #audio .jw-icon-volume:before {
+  content: "\f026";
+  display: inline-block;
+  font-family: "FontAwesome", Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
 }
 .live .prevclip__container {
   margin-bottom: 20px;

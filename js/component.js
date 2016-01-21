@@ -115,7 +115,6 @@
     });
 
     $('.js-btn-radio').on('click', function(){
-      $('.js-btn-radio').removeClass('is-play');
       $(this).toggleClass('is-play');
     });
 

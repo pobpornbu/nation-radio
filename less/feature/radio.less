@@ -124,11 +124,6 @@
 			}
 		});
 	});
-	#audio_controlbar {
-		.jwbackground, .jwcapLeft {
-			background: none; display: none;
-		}
-	}
 	#audio {
 		position: absolute;
 		margin: 0 auto;
@@ -137,17 +132,39 @@
 		.transform(translateX(-50%));
 		width: 100%;
 		margin-top: @gap-element;
-
-		.jwvolumeH {
-			width: 259px;
+		.jw-group:focus { outline: none; }
+		.jw-controlbar-left-group, .jw-controlbar-center-group {
+			display: none;
 		}
-		.jwprogressOverflow {
-			overflow: visible;
-			opacity: 1 !important;
+		.jw-controlbar-right-group {
+			&:after {
+				.icon-fontawesome("\f028");
+				color: rgb(255, 255, 255);
+	    	font-size: 24px;
+	    	text-align: center;
+	    	position: absolute;
+	    	right: 5px;
+	    	top: 3px;
+			}			
 		}
-		@media screen and (min-width: 768px){
-			.jwvolumeH {
-				width: 269px;
+		.jw-background-color{
+			background: none; 
+		}
+		.jw-buffer {
+			background: #ebebeb; 
+		}
+		.jw-progress, .jw-knob {
+			background: #f7b018;
+		}
+		.jw-slider-horizontal .jw-slider-container {
+			width: 230px;
+		}
+		.jw-icon-volume{
+    	&:before {
+				.icon-fontawesome("\f026");
+				color: rgb(255, 255, 255);
+	    	font-size: 24px;
+	    	text-align: center;
 			}
 		}
 	}
