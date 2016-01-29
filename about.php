@@ -39,7 +39,7 @@
           </p>
         </section>
         <section class="clearfix gap-row-bottom">
-                  <h3 class="head --topic">คณะทำงาน</h3>
+          <h3 class="head --topic">คณะทำงาน</h3>
           <ul class="head --static executive-list col-sm-6">
             <li><strong>กรรมการผู้อำนวยการ</strong><span>อดิศักดิ์ ลิมปรุ่งพัฒนกิจ</span></li>
             <li><strong>ผู้อำนวยการวิทยุเนชั่น</strong><span>ชไมพร คงเพชร</span></li>

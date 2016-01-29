@@ -157,9 +157,61 @@
 }
 
 // Ads ============================================
-.ads-top-menu {
-	padding: 15px 0;
-}
-.ads-top, .ads-bottom {
-	max-width: 315px;
-}
+.component(ads{
+	.part(container{
+		.option(left{
+			@media screen and (min-width: @screen-md-min){
+				padding-left: 0;
+			}
+		});
+		.option(middle{
+			@media screen and (min-width: @screen-md-min){
+				padding-left: 0; padding-right: 0;
+			}
+		});
+		.option(right{
+			@media screen and (min-width: @screen-md-min){
+				padding-right: 0;
+			}
+			.col-sm-6 {
+				@media screen and (max-width: 345px){
+					padding: 0;
+				}
+			}	
+		});
+	});
+	.option(tall{
+		max-width: 344px;
+		@media screen and (max-width: 345px){
+			padding: 0;
+			overflow: hidden;
+		}	
+	});
+	.option(sm{
+		max-width: 315px;
+		max-height: 264px;
+		text-align: center;
+		div { display: inline-block; }
+		@media screen and (max-width: 345px){
+			padding: 5px 0 0 0;
+		}
+	});
+	.option(top{
+		margin-bottom: 15px;
+		@media screen and (min-width: @screen-sm-min){
+			margin-bottom: 40px;
+		}
+	});
+	.option(border{
+		border: 2px solid @gray-lighter;
+		padding: 5px;
+
+		@media screen and (min-width: @screen-sm-min){
+		 	border: 2px solid @white;
+		}
+	});
+	.option(topbar{
+		padding: 15px 0;
+	});
+});
+

@@ -723,12 +723,68 @@ lesshat-selector {
     display: none;
   }
 }
-.ads-top-menu {
-  padding: 15px 0;
+@media screen and (min-width: 992px) {
+  .ads__container.\--left {
+    padding-left: 0;
+  }
 }
-.ads-top,
-.ads-bottom {
+@media screen and (min-width: 992px) {
+  .ads__container.\--middle {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .ads__container.\--right {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 345px) {
+  .ads__container.\--right .col-sm-6 {
+    padding: 0;
+  }
+}
+.ads.\--tall {
+  max-width: 344px;
+}
+@media screen and (max-width: 345px) {
+  .ads.\--tall {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+.ads.\--sm {
   max-width: 315px;
+  max-height: 264px;
+  text-align: center;
+}
+.ads.\--sm div {
+  display: inline-block;
+}
+@media screen and (max-width: 345px) {
+  .ads.\--sm {
+    padding: 5px 0 0 0;
+  }
+}
+.ads.\--top {
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .ads.\--top {
+    margin-bottom: 40px;
+  }
+}
+.ads.\--border {
+  border: 2px solid #eeeeee;
+  padding: 5px;
+}
+@media screen and (min-width: 768px) {
+  .ads.\--border {
+    border: 2px solid #ffffff;
+  }
+}
+.ads.\--topbar {
+  padding: 15px 0;
 }
 a[rel="nofollow"] {
   text-decoration: none;
